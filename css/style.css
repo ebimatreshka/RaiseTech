@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Noto Sans JP", MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
+  font-weight: bold;
+  color: #121212;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: darkviolet;
+}
+.header-left {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-left a {
+  width: 160px;
+}
+.header-right ul {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+.header-right li {
+  padding: 0 15px;
+}
+/*# sourceMappingURL=style.css.map */
