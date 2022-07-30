@@ -1,5 +1,7 @@
 @charset  "utf-8";
-
+$blue-color: #2498B3; 
+$black-color: #131D34;
+	
 * {
     margin: 0;
     padding: 0;
@@ -9,38 +11,55 @@ html {
 }
 body {
     font-family: "Noto Sans JP", MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;;
-    font-weight: bold;
-    color: #121212;
+    font-size: 1.3rem;
+    color: $black-color;
 }
-ul { list-style: none;
+ul { 
+    list-style: none;
 }
 a {
     text-decoration: none;
-    color: black;
+    color: $black-color
 }
 
 //ヘッダー
 .header {
+    font-weight: bold;
     display: flex;
     justify-content: space-between;
-    background-color: darkviolet;
     &-left {
-        height: 70px;
+        height: 85px;
         display: flex;
         justify-content: center;
         align-items: center;
-        a {
-            width: 160px;
-        }   
+        img {
+            display: inline-block;
+        }
+        strong {
+            font-size: 1.6rem;
+        } 
+        p {
+            margin: 0 0 0 16px;
+        }
+    }  
+    &-left-comment {
+        display: inline-block;
     }
+}
+.header {   
     &-right ul {
-        height: 70px;
+        height: 85px;
         display: flex;
         align-items: center;
     }
-    &-right li {
+    a {
+        display: inline-block;
+        height: 85px;
+        line-height: 85px;
         padding: 0 15px;
+
+        }
+    .header-right-last {
+        background-color: $blue-color;
     }
 }
-    
-
