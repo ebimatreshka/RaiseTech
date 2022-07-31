@@ -63,3 +63,31 @@ a {
         background-color: $blue-color;
     }
 }
+
+//セクション１
+.main {
+    &-blue {
+        height: 100vh; /* 全画面表示 */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero3.png);
+    }
+    &-img-layer1 {
+        height: 100vh; /* 全画面表示 */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero2.png);
+    }
+    &-img-layer2 {
+        height: 100vh; /* 全画面表示 */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero1.png);
+    }
+
+
+}
