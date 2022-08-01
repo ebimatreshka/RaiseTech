@@ -5,13 +5,14 @@
 }
 
 html {
-  font-size: 100%;
+  font-size: 62.5%;
 }
 
 body {
   font-family: "Noto Sans JP", MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.7;
   color: #131D34;
 }
 
@@ -36,6 +37,7 @@ a {
 }
 .header-left img {
   display: inline-block;
+  padding-top: 28px;
 }
 .header-left strong {
   font-size: 1.6rem;
@@ -85,10 +87,35 @@ a {
   background-size: cover;
   background-position: center center;
   background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero1.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main .inner1-center {
-  max-width: 530px;
+  max-width: 580px;
   text-align: center;
-  margin: auto;
+  background-color: #FFF;
+  padding: 43px 40px 19px 40px;
+  border-radius: 3%;
+}
+.main .inner1-center img {
+  width: 333px;
+  height: 58px;
+}
+.main .inner1-center a {
+  background-color: #2498B3;
+  display: inline-block;
+  padding: 24px 37px;
+  border-radius: 4%;
+  color: #FFF;
+}
+.main .inner1-content {
+  width: 450px;
+}
+.main .inner1-content p {
+  margin: 20px 0;
+}
+.main .inner1-content-btn {
+  margin: 40px 0 20px 0;
 }
 /*# sourceMappingURL=style.css.map */
