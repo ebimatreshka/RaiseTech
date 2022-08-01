@@ -11,6 +11,7 @@ html {
 body {
   font-family: "Noto Sans JP", MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
   font-size: 1.3rem;
+  font-weight: bold;
   color: #131D34;
 }
 
@@ -24,7 +25,6 @@ a {
 }
 
 .header {
-  font-weight: bold;
   display: flex;
   justify-content: space-between;
 }
@@ -60,10 +60,12 @@ a {
 }
 .header .header-right-last {
   background-color: #2498B3;
+  color: #FFF;
 }
 
 .main-blue {
   height: 100vh; /* 全画面表示 */
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -83,5 +85,10 @@ a {
   background-size: cover;
   background-position: center center;
   background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero1.png);
+}
+.main .inner1-center {
+  max-width: 530px;
+  text-align: center;
+  margin: auto;
 }
 /*# sourceMappingURL=style.css.map */
