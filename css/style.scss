@@ -1,6 +1,6 @@
 @charset  "utf-8";
 $blue-color: #2498B3; 
-$black-color: #131D34;
+$black-color: #121212;
 $white-color: #FFF;
 	
 * {
@@ -11,6 +11,7 @@ html {
     font-size: 62.5%;
 }
 body {
+    width: 100vw;
     font-family: "Noto Sans JP", MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;;
     font-size: 1.6rem;
     font-weight: 400;
@@ -27,7 +28,7 @@ a {
 
 //ヘッダー
 .header {
-    margin: 0 0 0 21px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,68 +37,53 @@ a {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        background-color: cornflowerblue;
+        background-color: wheat;
+        a {
+            display: flex;
+            line-height: 1.3;
+            font-weight: 900;
+        }
+        img {
+            height: 33px;
+            width: auto;
+        }
+    }
+    &-left-RT {
+        margin: 0 0 0 21px;
     }
     &-left-comment {
+        font-weight: 900;
+        font-size: 1.4rem;
+        line-height: 1.3;
         margin-left: 16px;
+        strong {
+            font-size: 1.8rem;
+        }
     }
     &-right {
+        font-weight: 700;
+        height: 70px;
         ul {
             height: 70px;
             display: flex;
             align-items: center;
-            background-color: aqua;
-            li {
-                padding: 0 10px 0 10px;
+            a {
+                display: block;
+                height: 70px;
+                line-height: 70px;
+                padding: 0 15px;
+                background-color: peachpuff;
             }
         }
     }
-}
-
-/*
-//ヘッダー
-.header {
-    display: flex;
-    justify-content: space-between;
-    &-left {
-        height: 85px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img {
-            display: inline-block;
-            padding-top: 28px;
-        }
-        strong {
-            font-size: 1.6rem;
-        } 
-        p {
-            margin: 0 0 0 16px;
-        }
-    }  
-    &-left-comment {
-        display: inline-block;
-    }
-}
-.header {   
-    &-right ul {
-        height: 85px;
-        display: flex;
-        align-items: center;
-    }
-    a {
-        display: inline-block;
-        height: 85px;
-        line-height: 85px;
-        padding: 0 15px;
-
-        }
     .header-right-last {
         background-color: $blue-color;
         color: $white-color;
     }
 }
+        
 
+/*
 //セクション１
 .main {
     &-blue {
