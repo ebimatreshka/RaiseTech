@@ -26,96 +26,130 @@ a {
 }
 
 .header {
+  margin: 0 0 0 21px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .header-left {
-  height: 85px;
+  height: 70px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-}
-.header-left img {
-  display: inline-block;
-  padding-top: 28px;
-}
-.header-left strong {
-  font-size: 1.6rem;
-}
-.header-left p {
-  margin: 0 0 0 16px;
+  background-color: cornflowerblue;
 }
 .header-left-comment {
-  display: inline-block;
+  margin-left: 16px;
 }
-
 .header-right ul {
-  height: 85px;
+  height: 70px;
   display: flex;
   align-items: center;
+  background-color: aqua;
 }
-.header a {
-  display: inline-block;
-  height: 85px;
-  line-height: 85px;
-  padding: 0 15px;
-}
-.header .header-right-last {
-  background-color: #2498B3;
-  color: #FFF;
+.header-right ul li {
+  padding: 0 10px 0 10px;
 }
 
-.main-blue {
-  height: 100vh; /* 全画面表示 */
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-  background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero3.png);
+/*
+//ヘッダー
+.header {
+    display: flex;
+    justify-content: space-between;
+    &-left {
+        height: 85px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            display: inline-block;
+            padding-top: 28px;
+        }
+        strong {
+            font-size: 1.6rem;
+        } 
+        p {
+            margin: 0 0 0 16px;
+        }
+    }  
+    &-left-comment {
+        display: inline-block;
+    }
 }
-.main-img-layer1 {
-  height: 100vh; /* 全画面表示 */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero2.png);
+.header {   
+    &-right ul {
+        height: 85px;
+        display: flex;
+        align-items: center;
+    }
+    a {
+        display: inline-block;
+        height: 85px;
+        line-height: 85px;
+        padding: 0 15px;
+
+        }
+    .header-right-last {
+        background-color: $blue-color;
+        color: $white-color;
+    }
 }
-.main-img-layer2 {
-  height: 100vh; /* 全画面表示 */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero1.png);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+//セクション１
+.main {
+    &-blue {
+        height: 100vh; //全画面表示 
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero3.png);
+    }
+    &-img-layer1 {
+        height: 100vh; // 全画面表示 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero2.png);
+    }
+    &-img-layer2 {
+        height: 100vh; // 全画面表示 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero1.png);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inner1-center {
+        max-width: 580px;
+        text-align: center;
+        background-color: $white-color;
+        padding: 43px 40px 19px 40px;
+        border-radius: 3%;
+        img {
+            width: 333px;
+            height: 58px;
+        }
+        a {
+            background-color: $blue-color;
+            display: inline-block;
+            padding: 24px 37px;
+            border-radius: 4%;
+            color: $white-color;
+        }
+    }
+    .inner1-content {
+        width: 450px;
+        p {
+            margin: 20px 0;
+        }
+        &-btn {
+            margin: 40px 0 20px 0;
+        }
+    }
 }
-.main .inner1-center {
-  max-width: 580px;
-  text-align: center;
-  background-color: #FFF;
-  padding: 43px 40px 19px 40px;
-  border-radius: 3%;
-}
-.main .inner1-center img {
-  width: 333px;
-  height: 58px;
-}
-.main .inner1-center a {
-  background-color: #2498B3;
-  display: inline-block;
-  padding: 24px 37px;
-  border-radius: 4%;
-  color: #FFF;
-}
-.main .inner1-content {
-  width: 450px;
-}
-.main .inner1-content p {
-  margin: 20px 0;
-}
-.main .inner1-content-btn {
-  margin: 40px 0 20px 0;
-}
+*/
 /*# sourceMappingURL=style.css.map */
