@@ -37,7 +37,6 @@ a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: wheat;
 }
 .header-left a {
   display: flex;
@@ -74,11 +73,20 @@ a {
   height: 70px;
   line-height: 70px;
   padding: 0 15px;
-  background-color: peachpuff;
 }
 .header .header-right-last {
   background-color: #2498B3;
   color: #FFF;
+}
+
+.main-blue {
+  height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero3.png);
 }
 
 /*
