@@ -95,7 +95,6 @@ a {
     }
     &-img-layer1 { //ここではbackground-sizeを設定しなかったら大きな絵になった
         height: 100vh; // 全画面表示 
-        background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
         background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero2.png);
@@ -108,10 +107,48 @@ a {
         background-position: center center;
         background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero1.png);
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
     }
+    .inner1-center {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    padding: 43px 40px 19px 40px;
+    background-color: $white-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    z-index: 500
+    }
 }
+.inner1-center {
+    h1 {
+        margin-bottom: 0.5rem;
+        img {
+            width: 280px;
+            height: auto;
+            }
+    }
+    .inner1-content {
+        font-weight: 700;
+        &-btn {
+            font-weight: 700;
+            margin: 1.3em 0 0.5em;
+            a {
+                padding: 24px 37px;
+                font-size: 1.8rem;
+                background-color: $blue-color;
+                border-color: $blue-color;
+                color: $white-color;
+                }
+        }
+    }
+}
+
+
+
 
 /*--
 //セクション１
