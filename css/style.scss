@@ -89,7 +89,6 @@ a {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
-        position: relative;
         background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero3.png);
     }
     &-img-layer1 { //ここではbackground-sizeを設定しなかったら大きな絵になった
@@ -98,6 +97,7 @@ a {
         background-repeat: no-repeat;
         background-position: center center;
         background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero1.png);
+        position: relative;
     }
     &-img-layer2 {
         height: 100vh; // 全画面表示 
