@@ -12,7 +12,6 @@ html {
 }
 body {
     width: 100vw;
-    padding: 70px;
     font-family: "Noto Sans JP", MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;;
     font-size: 1.6rem;
     font-weight: 400;
@@ -92,7 +91,6 @@ a {
     &-blue {
         height: 100vh;//全画面表示
         position: relative;
-        left: -70px;
         overflow: hidden;//2枚目の画像のはみ出しがこれでなくなった
         background-attachment: fixed;//画面を固定
         background-repeat: no-repeat;
@@ -161,3 +159,45 @@ a {
     }
 }
 
+//セクション
+.section {
+    color: $white-color;
+    //background-color: #000000;
+    &-box {
+        display: flex;
+    }
+}
+.section .section1-item,
+.section2-item,
+.section3-item {
+    p {
+    width: 230px;
+    height: 230px;
+    color: #000000;
+    border: solid 6px #000000;
+    border-radius: 50%;
+    background-color: $white-color;
+}
+i {
+    width: 240px;
+    height: 240px;
+    font-size: 10rem;
+    text-align: center;
+    }
+}
+
+
+
+
+//ヘッダー 1280pxで消える
+@media screen and (max-width:1280px){
+    .header .header-left-comment {
+        display: none;
+    }
+}
+//ヘッダー 1200pxで消える
+@media screen and (max-width:1200px){
+    .header .header-right {
+        display: none;
+    }
+}
