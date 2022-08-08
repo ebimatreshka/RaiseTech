@@ -61,6 +61,13 @@ a {
         font-size: 1.4rem;
         line-height: 1.3;
         margin-left: 16px;
+
+        //ヘッダー 1280pxで消える
+        @media screen and (max-width:1280px){
+            .header .header-left-comment {
+                display: none;
+            }
+        }
         strong {
             font-size: 1.8rem;
             font-weight: bolder;
@@ -86,7 +93,7 @@ a {
         color: $white-color;
     }
 }
-     
+
 //メイン　背景画像
 .main {
     &-blue {
@@ -98,7 +105,7 @@ a {
         background-size: cover;
         background-position: center center;
         background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero3.png);
-   
+        
     }
     &-img-layer1 { //ここではbackground-sizeを設定しなかったら大きな絵になった
         height: 100vh; // 全画面表示 
@@ -120,17 +127,17 @@ a {
         position: absolute;
     }
     .inner1-center {
-    position: absolute;
-    top: 30%;
-    left: 35%;
-    padding: 43px 40px 19px 40px;
-    background-color: $white-color;
-    border-radius: 3%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; 
-    z-index: 500
+        position: absolute;
+        top: 30%;
+        left: 35%;
+        padding: 43px 40px 19px 40px;
+        background-color: $white-color;
+        border-radius: 3%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+        z-index: 500
     }
 }
 
@@ -140,7 +147,7 @@ a {
         img {
             width: 280px;
             height: auto;
-            }
+        }
     }
     .inner1-content {
         font-weight: 700;
@@ -177,7 +184,7 @@ a {
     &2-content,
     &3-content {
         margin: 0 50px;
-    width: 229px;
+        width: 229px;
     }
 }
 
@@ -186,22 +193,22 @@ a {
 .section3-item {
     text-align: center;
     p {
-    width: 230px;
-    height: 230px;
-    color: #000000;
-    border: solid 6px #000000;
-    border-radius: 50%;
-    background-color: $white-color;
-    position: relative;
-}
-i {
-    width: 240px;
-    height: 240px;
-    font-size: 10rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -25%);
+        width: 230px;
+        height: 230px;
+        color: #000000;
+        border: solid 6px #000000;
+        border-radius: 50%;
+        background-color: $white-color;
+        position: relative;
+    }
+    i {
+        width: 240px;
+        height: 240px;
+        font-size: 10rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -25%);
     }
 }
 
@@ -215,13 +222,6 @@ i {
 
 
 
-
-//ヘッダー 1280pxで消える
-@media screen and (max-width:1280px){
-    .header .header-left-comment {
-        display: none;
-    }
-}
 //ヘッダー 1200pxで消える
 @media screen and (max-width:1200px){
     .header .header-right {
