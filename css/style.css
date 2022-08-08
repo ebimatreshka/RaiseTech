@@ -63,6 +63,7 @@ a {
 }
 .header-left-comment strong {
   font-size: 1.8rem;
+  font-weight: bolder;
 }
 .header-right {
   font-weight: 700;
@@ -154,11 +155,24 @@ a {
 
 .section {
   color: #FFF;
+  background-color: #000000;
+  padding: 0 0 4em 0;
 }
 .section-box {
   display: flex;
+  justify-content: center;
 }
 
+.section1-content, .section2-content, .section3-content {
+  margin: 0 50px;
+  width: 229px;
+}
+
+.section .section1-item,
+.section2-item,
+.section3-item {
+  text-align: center;
+}
 .section .section1-item p,
 .section2-item p,
 .section3-item p {
@@ -168,6 +182,7 @@ a {
   border: solid 6px #000000;
   border-radius: 50%;
   background-color: #FFF;
+  position: relative;
 }
 .section .section1-item i,
 .section2-item i,
@@ -175,7 +190,18 @@ a {
   width: 240px;
   height: 240px;
   font-size: 10rem;
-  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
+
+.section .section1-info,
+.section2-info,
+.section3-info {
+  margin: 0.5em 0 0 0;
+  line-height: 1.7;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 1280px) {
