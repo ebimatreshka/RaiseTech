@@ -110,14 +110,14 @@ a {
     &-img-layer1 { //ここではbackground-sizeを設定しなかったら大きな絵になった
         height: 100vh; // 全画面表示 
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: 50% 15%;
         background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero2.png);
         position: relative;
     }
     &-img-layer2 {
         height: 100vh; // 全画面表示 
         width: 100%;
-        padding-top: 175px;
+        padding-top: 90px;
         background-repeat: no-repeat;
         background-position: center center;
         background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero1.png);
@@ -128,7 +128,7 @@ a {
     }
     .inner1-center {
         position: absolute;
-        top: 30%;
+        top: 22%;
         left: 35%;
         padding: 43px 40px 19px 40px;
         background-color: $white-color;
@@ -185,12 +185,14 @@ a {
     &3-content {
         margin: 0 50px;
         width: 229px;
+        margin-top: -185px;
     }
 }
 
 .section .section1-item,
 .section2-item,
 .section3-item {
+    width: 242px;
     text-align: center;
     p {
         width: 230px;
