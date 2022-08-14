@@ -93,6 +93,7 @@ a {
   flex-direction: column;
   position: absolute;
   top: 70px;
+  display: none;
 }
 .nav-menu1 li {
   font-weight: normal;
@@ -195,6 +196,8 @@ strong {
 .section-box {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  width: 100vw;
 }
 
 .section1-content, .section2-content, .section3-content {
@@ -203,12 +206,12 @@ strong {
   margin-top: -185px;
 }
 
-.section .section1-item,
+.section1-item,
 .section2-item,
 .section3-item {
   text-align: center;
 }
-.section .section1-item p,
+.section1-item p,
 .section2-item p,
 .section3-item p {
   width: 230px;
@@ -219,7 +222,7 @@ strong {
   background-color: #FFF;
   position: relative;
 }
-.section .section1-item i,
+.section1-item i,
 .section2-item i,
 .section3-item i {
   width: 240px;
@@ -231,12 +234,7 @@ strong {
   transform: translate(-50%, -25%);
 }
 
-.section3-item h2 {
-  display: flex;
-  justify-content: center;
-}
-
-.section .section1-info,
+.section1-info,
 .section2-info,
 .section3-info {
   margin: 0.5em 0 0 0;
