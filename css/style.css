@@ -85,7 +85,7 @@ a {
   color: #FFF;
 }
 
-.header .header-right-li-1 {
+.header-right-li-1 {
   position: relative;
 }
 
@@ -93,11 +93,26 @@ a {
   flex-direction: column;
   position: absolute;
   top: 70px;
-  display: none;
 }
-.nav-menu1 li {
+.nav-menu1 .nav-menu-li {
   font-weight: normal;
   background-color: #E9F8FB;
+  white-space: nowrap;
+}
+
+.header-right-li-2 {
+  position: relative;
+}
+
+.nav-menu2 {
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+}
+.nav-menu2 .nav-menu-li {
+  font-weight: normal;
+  background-color: #E9F8FB;
+  white-space: nowrap;
 }
 
 .header-right li:hover {

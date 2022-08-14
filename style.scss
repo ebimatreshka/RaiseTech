@@ -74,6 +74,7 @@ a {
     }
 }
 
+
 .header {
     &-right {
         font-weight: 700;
@@ -99,19 +100,35 @@ a {
 }    
 
 //アコーディオンメニュー
-.header .header-right-li-1 {
+.header-right-li-1 {
     position: relative;
 }
 .nav-menu1 {
     flex-direction: column;
     position: absolute;
     top: 70px;
-    display: none;
-    li {
+    .nav-menu-li {
         font-weight: normal;
         background-color: #E9F8FB;
+        white-space: nowrap;
+        //display: none;
     }
 }
+
+.header-right-li-2 {
+    position: relative;
+}
+.nav-menu2 {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    .nav-menu-li {
+        font-weight: normal;
+        background-color: #E9F8FB;
+        white-space: nowrap;
+    }
+}
+
 
 
 
