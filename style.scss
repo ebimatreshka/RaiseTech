@@ -140,7 +140,9 @@ a {
 }
 .header-right .nav-menu-li {
     a:hover {
-        color: $blue-color;
+        color: #2498B3;
+        background-color: #FFF;
+        text-decoration: none;
     }
 }
 
@@ -192,12 +194,12 @@ strong {
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: 44px;
+        top: 53px;
     }
     .inner1-center {
         position: absolute;
-        top: 22%;
-        left: 35%;
+        top: 23%;
+        left: 36%;
         padding: 43px 40px 19px 40px;
         background-color: $white-color;
         border-radius: 3%;
@@ -216,6 +218,9 @@ strong {
             width: 280px;
             height: auto;
         }
+    }
+    p {
+        font-weight: 700;
     }
 }
 
@@ -259,7 +264,7 @@ strong {
     &3-content {
         margin: 0 50px;
         width: 229px;
-        margin-top: -185px;
+        margin-top: -160px;
     }
 }
 
@@ -287,7 +292,6 @@ strong {
     }
 }
 
-S
 .section1-h2,
 .section2-h2,
 .section3-h2 {
