@@ -254,7 +254,6 @@ strong {
     .inner1-center {
         position: absolute;
         top: 23%;
-        left: 36%;
         padding: 43px 40px 19px 40px;
         background-color: $white-color;
         border-radius: 3%;
@@ -264,6 +263,11 @@ strong {
         flex-direction: column; 
         z-index: 500
     }
+}
+
+.wrapper-inner1-center {
+    display: flex;
+    justify-content: center; 
 }
 
 .inner1-center {
