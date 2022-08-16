@@ -4,7 +4,42 @@
 $blue-color: #2498B3; 
 $black-color: #121212;
 $white-color: #FFF;
-	
+
+//レスポンシブ対応
+//ブレイクポイント
+$first: 1280px; //ヘッダーの左のコメントが消える
+$second: 1260px; //メニューのリストが左に寄る
+$third: 1200px; //ハンバーガーボタン出現、ヘッダーの高さ変化、ロゴ小さくなる
+$fourth: 1077px; //○が真ん中に寄ってくる
+$mobile: 767px; //スマホ表示(絵、文字、ボタン)絵は一つづつ 説明も一行
+
+@mixin vanished {
+    @media screen and (max-width: $first) {
+        @content;
+    }
+}
+@mixin padding {
+    @media screen and (max-width: second) {
+        @content;
+    }
+}
+@mixin btn {
+    @media screen and (max-width: $third) {
+        @content;
+    }
+}
+@mixin circle {
+    @media screen and (max-width: $fourth) {
+        @content;        
+    }
+}
+@mixin mobile {
+    @media screen and (max-width: $mobile) {
+        @content;
+    }
+}
+
+
 
 * {
     margin: 0;
@@ -79,6 +114,12 @@ a {
     &-right {
         font-weight: 700;
         height: 70px;
+        //ヘッダー 1280pxで消える
+        @media screen and (max-width:1200px){
+            .header .header-right {
+                display: none;
+            }
+        }
         .header-right-ul {
             height: 70px;
             display: flex;
@@ -140,7 +181,7 @@ a {
 }
 .header-right .nav-menu-li {
     a:hover {
-        color: #2498B3;
+        color: $blue-color;
         background-color: #FFF;
         text-decoration: none;
     }
@@ -309,9 +350,3 @@ strong {
 
 
 
-//ヘッダー 1200pxで消える
-@media screen and (max-width:1200px){
-    .header .header-right {
-        display: none;
-    }
-}

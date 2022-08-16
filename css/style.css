@@ -68,6 +68,11 @@ a {
   font-weight: 700;
   height: 70px;
 }
+@media screen and (max-width: 1200px) {
+  .header-right .header .header-right {
+    display: none;
+  }
+}
 .header-right .header-right-ul {
   height: 70px;
   display: flex;
@@ -267,11 +272,5 @@ strong {
   margin: 0.5em 0 0 0;
   line-height: 1.7;
   font-weight: 700;
-}
-
-@media screen and (max-width: 1200px) {
-  .header .header-right {
-    display: none;
-  }
 }
 /*# sourceMappingURL=style.css.map */
