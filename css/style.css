@@ -38,6 +38,11 @@ a {
   z-index: 1100;
   background-color: #FFF;
 }
+@media screen and (max-width: 1200px) {
+  .header {
+    height: 50px;
+  }
+}
 .header-left {
   height: 70px;
   display: flex;
@@ -63,31 +68,56 @@ a {
   line-height: 1.3;
   margin-left: 16px;
 }
+@media screen and (max-width: 1280px) {
+  .header-left-comment {
+    display: none;
+  }
+}
 
 .header-right {
   font-weight: 700;
   height: 70px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
   .header-right .header .header-right {
     display: none;
   }
 }
-.header-right .header-right-ul {
+.header .header-right-ul {
   height: 70px;
   display: flex;
   align-items: center;
 }
-.header-right .header-right-ul a {
+@media screen and (max-width: 1200px) {
+  .header .header-right-ul .vanished {
+    display: none;
+  }
+}
+.header .header-right-ul a {
   display: block;
   height: 70px;
   line-height: 70px;
   padding: 0 15px;
 }
+@media screen and (max-width: 1260px) {
+  .header .header-right-ul a {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header .header-right-ul a {
+    height: 50px;
+  }
+}
 
 .header-right-last {
   background-color: #2498B3;
   color: #FFF;
+}
+@media screen and (max-width: 1260px) {
+  .header-right-last {
+    padding: 0 10px;
+  }
 }
 
 .header-right-li-1 {
@@ -131,11 +161,6 @@ a {
   text-decoration: none;
 }
 
-@media screen and (max-width: 1280px) {
-  .header .header-left-comment {
-    display: none;
-  }
-}
 strong {
   font-size: 1.8rem;
   font-weight: bolder;

@@ -19,7 +19,7 @@ $mobile: 767px; //スマホ表示(絵、文字、ボタン)絵は一つづつ �
     }
 }
 @mixin padding {
-    @media screen and (max-width: second) {
+    @media screen and (max-width: $second) {
         @content;
     }
 }
@@ -78,6 +78,10 @@ a {
     left: 0;
     z-index: 1100;
     background-color: $white-color;
+    //レスポンシブ
+    @include btn {
+        height: 50px;
+    }
     &-left {
         height: 70px;
         display: flex;
@@ -104,7 +108,12 @@ a {
         font-weight: 900;
         font-size: 1.4rem;
         line-height: 1.3;
-        margin-left: 16px;
+        margin-left: 16px;                
+        //レスポンシブ
+        @include vanished {
+            display: none;
+        }
+
         
     }
 }
@@ -114,29 +123,46 @@ a {
     &-right {
         font-weight: 700;
         height: 70px;
-        //ヘッダー 1280pxで消える
-        @media screen and (max-width:1200px){
             .header .header-right {
-                display: none;
+                //レスポンシブ
+                @include vanished {
+                    display: none;
+                }
             }
         }
         .header-right-ul {
             height: 70px;
             display: flex;
             align-items: center;
+            .vanished {
+                //レスポンシブ
+                @include btn {
+                    display: none;
+                }
+            }
             a {
                 display: block;
                 height: 70px;
                 line-height: 70px;
                 padding: 0 15px;
+                //レスポンシブ
+                @include padding {
+                    padding: 0 10px;
+                }
+                @include btn {
+                    height: 50px;
+                }            
             }
         }
-    }
 }
 .header {
     &-right-last {
         background-color: $blue-color;
         color: $white-color;
+        //レスポンシブ
+        @include padding {
+            padding: 0 10px;
+        }
     }
 }    
 
@@ -171,8 +197,6 @@ a {
 }
 
 
-
-
 //hoverした時のheaderのlist
 .header-right {
     li:hover {
@@ -187,16 +211,6 @@ a {
     }
 }
 
-
-
-
-
-//ヘッダー 1280pxで消える
-@media screen and (max-width:1280px){
-    .header .header-left-comment {
-        display: none;
-    }
-}
 strong {
     font-size: 1.8rem;
     font-weight: bolder;
