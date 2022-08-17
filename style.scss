@@ -136,31 +136,33 @@ a {
                 }
             }
         }
-        .header-right-ul {
-            height: 70px;
-            display: flex;
-            align-items: center;
-            //レスポンシブ
-            @include btn {
-            //display: none;
-            }
-            a {
-                display: block;
-                //height: 70px;
-                line-height: 70px;
-                padding: 0 15px;
-                transition: padding 0.5s ease;
-                //レスポンシブ
-                // @include padding {
-                // padding: 0 10px;
-                // }
-                // @include btn {
-                // height: 50px;
-                // line-height: 50px;
-                // }            
-            }
+    }
+
+.header-right-ul {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    //レスポンシブ
+    @include btn {
+    display: none;
+    }
+    a {
+        display: block;
+        //height: 70px;
+        line-height: 70px;
+        padding: 0 15px;
+        transition: padding 0.5s ease;
+        //レスポンシブ
+        @include padding {
+        padding: 0 10px;
         }
+        @include btn {
+        height: 50px;
+        line-height: 50px;
+        }            
+    }
 }
+
 .header {
     &-right-last {
         background-color: $blue-color;
@@ -203,33 +205,33 @@ a {
 }
 
 //アコーディオンメニューのレスポンシブ
-@include btn {
-    .header-right-wrapper {
-        display: block;
-        a {
-            display: block;
-            position: relative;
-            width: 50px;
-            height: 50px;
-        }
-    }
-    .header-right {
-        //display: none;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        right: 0;
-        z-index: 999;
-        background-color: #FFF;
-        ul {
-            flex-direction: column;
-            li {
-                height: auto;
-                padding: 10px;
-            }
-        }
-    }
-}
+// @include btn {
+//     .header-right-wrapper {
+//         display: block;
+//         a {
+//             display: block;
+//             position: relative;
+//             width: 50px;
+//             height: 50px;
+//         }
+//     }
+//     .header-right {
+//         //display: none;
+//         position: absolute;
+//         top: 50px;
+//         left: 0;
+//         right: 0;
+//         z-index: 999;
+//         background-color: #FFF;
+//         ul {
+//             flex-direction: column;
+//             li {
+//                 height: auto;
+//                 padding: 10px;
+//             }
+//         }
+//     }
+// }
 
 
 //hoverした時のheaderのlist
