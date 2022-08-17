@@ -10,7 +10,7 @@ $white-color: #FFF;
 $first: 1280px; //ヘッダーの左のコメントが消える
 $second: 1260px; //メニューのリストが左に寄る
 $third: 1200px; //ハンバーガーボタン出現、ヘッダーの高さ変化、ロゴ小さくなる
-$fourth: 1077px; //○が真ん中に寄ってくる
+$fourth: 1078px; //○が真ん中に寄ってくる
 $mobile: 767px; //スマホ表示(絵、文字、ボタン)絵は一つづつ 説明も一行
 
 @mixin vanished {
@@ -95,6 +95,9 @@ a {
         img {
             height: 33px;
             width: auto;
+            @include btn {
+                height: 30px;
+            }
         }
     }
 }  
@@ -103,6 +106,9 @@ a {
 .header {
     &-left-RT {
         margin: 0 0 0 21px;
+        @include btn {
+        margin: 10px;
+        }
     }
     &-left-comment {
         font-weight: 900;
@@ -134,25 +140,24 @@ a {
             height: 70px;
             display: flex;
             align-items: center;
-            .vanished {
-                //レスポンシブ
-                @include btn {
-                    display: none;
-                }
+            //レスポンシブ
+            @include btn {
+            //display: none;
             }
             a {
                 display: block;
-                height: 70px;
+                //height: 70px;
                 line-height: 70px;
                 padding: 0 15px;
                 transition: padding 0.5s ease;
                 //レスポンシブ
-                @include padding {
-                    padding: 0 10px;
-                }
-                @include btn {
-                    height: 50px;
-                }            
+                // @include padding {
+                // padding: 0 10px;
+                // }
+                // @include btn {
+                // height: 50px;
+                // line-height: 50px;
+                // }            
             }
         }
 }
@@ -194,6 +199,35 @@ a {
         font-weight: normal;
         background-color: #E9F8FB;
         white-space: nowrap;
+    }
+}
+
+//アコーディオンメニューのレスポンシブ
+@include btn {
+    .header-right-wrapper {
+        display: block;
+        a {
+            display: block;
+            position: relative;
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .header-right {
+        //display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        background-color: #FFF;
+        ul {
+            flex-direction: column;
+            li {
+                height: auto;
+                padding: 10px;
+            }
+        }
     }
 }
 
@@ -325,8 +359,13 @@ strong {
         margin: 0 50px;
         width: 229px;
         margin-top: -160px;
+        @include circle{
+        width: 29.33%;
+        margin: -160px 2%;
+        }
     }
 }
+
 
 .section1-item,
 .section2-item,

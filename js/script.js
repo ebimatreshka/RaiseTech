@@ -1,9 +1,8 @@
-  //アコーディオンメニュー(効いた)
+  //アコーディオンメニュー
 $(function() {
-    $('.header-hover').mouseover(function(){
-      $(this).children('.nav-menu1').stop().slideDown();
-    });
-    $('.header-hover').mouseout(function(){
-      $('.nav-menu1').stop().hide();
-    });
-  }); 
+	$('.header-hover').hover(function() {
+		$(this).find('.nav-menu1').stop().slideDown('fast');
+	}, function() {
+		$(this).find('.nav-menu1').stop().hide();
+	});
+})
