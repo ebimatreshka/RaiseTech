@@ -149,6 +149,12 @@ a {
     background-color: deeppink;
     }
 }
+
+.nav {
+    @include btn {
+        position: absolute;
+    }
+}
  
 
 .header-right-ul {
@@ -157,7 +163,7 @@ a {
     align-items: center;
     //レスポンシブ　ul消す
     @include btn {
-    display: none;
+    //display: none;
     }
     a {
         display: block;

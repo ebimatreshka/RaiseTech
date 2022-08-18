@@ -109,15 +109,16 @@ a {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .nav {
+    position: absolute;
+  }
+}
+
 .header-right-ul {
   height: 70px;
   display: flex;
   align-items: center;
-}
-@media screen and (max-width: 1200px) {
-  .header-right-ul {
-    display: none;
-  }
 }
 .header-right-ul a {
   display: block;
