@@ -80,7 +80,7 @@ a {
     background-color: $white-color;
     //レスポンシブ
     @include btn {
-        height: 50px;
+        height: 50px;//ボタンの高さ
     }
     &-left {
         height: 70px;
@@ -96,7 +96,7 @@ a {
             height: 33px;
             width: auto;
             @include btn {
-                height: 30px;
+                height: 30px;//ロゴの高さ
             }
         }
     }
@@ -107,7 +107,7 @@ a {
     &-left-RT {
         margin: 0 0 0 21px;
         @include btn {
-        margin: 10px;
+        margin: 10px;//ロゴのmargin
         }
     }
     &-left-comment {
@@ -129,20 +129,33 @@ a {
     &-right {
         font-weight: 700;
         height: 70px;
-            .header .header-right {
-                //レスポンシブ
-                @include vanished {
-                    display: none;
-                }
-            }
+        //レスポンシブ
+        @include vanished {
+        display: none;
         }
+        @include btn {
+        display: block;
+        height: 50px;//ヘッダーの高さ
+        }
+    }    
+}
+
+.header-btn {
+    //ボタン作り
+    @include btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: deeppink;
     }
+}
+ 
 
 .header-right-ul {
     height: 70px;
     display: flex;
     align-items: center;
-    //レスポンシブ
+    //レスポンシブ　ul消す
     @include btn {
     display: none;
     }
@@ -203,35 +216,6 @@ a {
         white-space: nowrap;
     }
 }
-
-//アコーディオンメニューのレスポンシブ
-// @include btn {
-//     .header-right-wrapper {
-//         display: block;
-//         a {
-//             display: block;
-//             position: relative;
-//             width: 50px;
-//             height: 50px;
-//         }
-//     }
-//     .header-right {
-//         //display: none;
-//         position: absolute;
-//         top: 50px;
-//         left: 0;
-//         right: 0;
-//         z-index: 999;
-//         background-color: #FFF;
-//         ul {
-//             flex-direction: column;
-//             li {
-//                 height: auto;
-//                 padding: 10px;
-//             }
-//         }
-//     }
-// }
 
 
 //hoverした時のheaderのlist
