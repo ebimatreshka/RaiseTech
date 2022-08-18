@@ -130,9 +130,9 @@ a {
         font-weight: 700;
         height: 70px;
         //レスポンシブ
-        @include vanished {
-        display: none;
-        }
+        // @include vanished {
+        // display: none;
+        // }
         @include btn {
         display: block;
         height: 50px;//ヘッダーの高さ
