@@ -82,6 +82,8 @@ a {
     @include btn {
         height: 50px;//①ヘッダーの高さが変わる
     }
+
+    //ヘッダー左側
     &-left {
         height: 70px;
         display: flex;
@@ -119,13 +121,18 @@ a {
         //『最速で』が消える
         @include vanished {
             display: none;
-        }
-
-        
+        }        
     }
 }
 
+strong {
+    font-size: 1.8rem;
+    font-weight: bolder;
+}
 
+
+
+//ヘッダー右側
 .header {
     &-right {
         font-weight: 700;
@@ -157,23 +164,6 @@ a {
     }
 }
 
-
-.header-right-ul li {
-    //レスポンシブ④listを白く
-    @include btn {
-        background-color: $white-color;
-    }
-}
-
-.vanished {
-    //レスポンシブ
-    //④ul消す
-    @include btn {
-        //display: none;
-        flex-direction: column;
-    }
-}
-
 .header-right-ul {
     height: 70px;
     display: flex;
@@ -202,17 +192,41 @@ a {
         @include btn {
         height: 50px;
         line-height: 50px;
-        //④横幅いっぱい
+        //④横幅いっぱい、背景
         width: 100vw;
         }            
     }
 }
+
+.header-right-ul li {
+    //レスポンシブ④listを白く
+    @include btn {
+        background-color: $white-color;
+    }
+}
+
+.vanished {
+    //レスポンシブ
+    //④ul消す
+    @include btn {
+        //display: none;
+        flex-direction: column;
+    }
+}
+
 
 .nav1 {
     //レスポンシブ④
     @include btn {
         height: auto;
         padding: 10px;
+        background-color: $white-color;
+    }
+}
+
+.nav1:hover {
+    @include btn {
+        background-color: #f3fafb;
     }
 }
 
@@ -222,6 +236,21 @@ a {
     }
 }
 
+//hoverした時のheaderのlist
+.header-right .nav-menu-li {
+    a:hover {
+        color: $blue-color;
+        background-color: #FFF;
+        text-decoration: none;
+        //レスポンシブ④
+        @include btn {
+            color: $black-color;
+            background-color: #f3fafb;
+        }
+    }
+}
+
+//受講お申込み
 .header {
     &-right-last {
         background-color: $blue-color;
@@ -256,6 +285,10 @@ a {
         font-weight: normal;
         background-color: #E9F8FB;
         white-space: nowrap;
+        //レスポンシブ④背景
+        @include btn {
+            background-color: $white-color;
+        }
 
     }
 }
@@ -279,20 +312,14 @@ a {
 .header-right {
     li:hover {
     background-color: #D4F1F8;
+    //レスポンシブ④
+    @include btn {
+        background-color: #f3fafb;
     }
-}
-.header-right .nav-menu-li {
-    a:hover {
-        color: $blue-color;
-        background-color: #FFF;
-        text-decoration: none;
     }
 }
 
-strong {
-    font-size: 1.8rem;
-    font-weight: bolder;
-}
+
 
 
 

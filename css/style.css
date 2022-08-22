@@ -84,6 +84,11 @@ a {
   }
 }
 
+strong {
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+
 .header-right {
   font-weight: 700;
   height: 70px;
@@ -107,18 +112,6 @@ a {
     width: 50px;
     height: 50px;
     background-color: deeppink;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .header-right-ul li {
-    background-color: #FFF;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .vanished {
-    flex-direction: column;
   }
 }
 
@@ -156,15 +149,46 @@ a {
 }
 
 @media screen and (max-width: 1200px) {
+  .header-right-ul li {
+    background-color: #FFF;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .vanished {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1200px) {
   .nav1 {
     height: auto;
     padding: 10px;
+    background-color: #FFF;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .nav1:hover {
+    background-color: #f3fafb;
   }
 }
 
 @media screen and (max-width: 1200px) {
   .nav-menu-li {
     padding: 10px 10px 10px 25px;
+  }
+}
+
+.header-right .nav-menu-li a:hover {
+  color: #2498B3;
+  background-color: #FFF;
+  text-decoration: none;
+}
+@media screen and (max-width: 1200px) {
+  .header-right .nav-menu-li a:hover {
+    color: #121212;
+    background-color: #f3fafb;
   }
 }
 
@@ -204,6 +228,11 @@ a {
   background-color: #E9F8FB;
   white-space: nowrap;
 }
+@media screen and (max-width: 1200px) {
+  .nav-menu1 .nav-menu-li {
+    background-color: #FFF;
+  }
+}
 
 .header-right-li-2 {
   position: relative;
@@ -223,16 +252,10 @@ a {
 .header-right li:hover {
   background-color: #D4F1F8;
 }
-
-.header-right .nav-menu-li a:hover {
-  color: #2498B3;
-  background-color: #FFF;
-  text-decoration: none;
-}
-
-strong {
-  font-size: 1.8rem;
-  font-weight: bolder;
+@media screen and (max-width: 1200px) {
+  .header-right li:hover {
+    background-color: #f3fafb;
+  }
 }
 
 .main-blue {
