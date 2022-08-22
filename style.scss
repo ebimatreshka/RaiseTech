@@ -146,12 +146,11 @@ strong {
     }    
 }
 
-.btn {
+.hamburger-btn {
+    display: none;
     //レスポンシブ④
     @include btn {
         display: block;
-    }
-    .header-btn {
         //レスポンシブ
         //④ボタン作り
         @include btn {

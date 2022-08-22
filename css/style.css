@@ -100,13 +100,16 @@ strong {
   }
 }
 
+.hamburger-btn {
+  display: none;
+}
 @media screen and (max-width: 1200px) {
-  .btn {
+  .hamburger-btn {
     display: block;
   }
 }
-@media screen and (max-width: 1200px) {
-  .btn .header-btn {
+@media screen and (max-width: 1200px) and (max-width: 1200px) {
+  .hamburger-btn {
     display: block;
     position: relative;
     width: 50px;
