@@ -153,15 +153,45 @@ strong {
         display: block;
         //レスポンシブ
         //④ボタン作り
-        @include btn {
-        display: block;
         position: relative;
         width: 50px;
         height: 50px;
         background-color: deeppink;
-        }
     }
 }
+
+.hamburger-btn span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: $blue-color;
+    position: absolute;
+    top: 50%;
+    left: 22%;
+}
+
+.hamburger-btn span:nth-child(1) {
+    transform: translate(0, -10px);
+}
+.hamburger-btn span:nth-child(2) {
+    transform: translate(0, 0);
+}
+.hamburger-btn span:nth-child(3) {
+    transform: translate(0, 8px);
+}
+
+//activeの時
+.hamburger-btn.active span:nth-child(1) {
+    transform: translate(0, -10px);
+}
+.hamburger-btn span:nth-child(2) {
+    transform: translate(0, 0);
+}
+.hamburger-btn span:nth-child(3) {
+    transform: translate(0, 8px);
+}
+
+
 
 .header-right-ul {
     height: 70px;
