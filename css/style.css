@@ -100,52 +100,53 @@ strong {
   }
 }
 
-.hamburger-btn {
-  display: none;
-}
 @media screen and (max-width: 1200px) {
-  .hamburger-btn {
-    display: block;
-    position: relative;
+  .hamburger-btn-wrapper {
     width: 50px;
     height: 50px;
-    background-color: deeppink;
+    background-color: #FFF;
+    position: relative;
   }
-  .hamburger-btn::before, .hamburger-btn::after {
+  .hamburger-btn-wrapper::before, .hamburger-btn-wrapper::after {
     content: "";
-    width: 20px;
-    height: 1px;
+    width: 25px;
+    height: 2px;
     background: #2498B3;
     position: absolute;
-    left: calc(50% - 10px);
+    left: calc(50% - 12.5px);
     display: block;
     transition: transform 0.2s;
   }
-  .hamburger-btn::before {
-    top: 12px;
+  .hamburger-btn-wrapper::before {
+    top: 15px;
   }
-  .hamburger-btn::after {
-    top: 32px;
+  .hamburger-btn-wrapper::after {
+    top: 34px;
   }
-  .hamburger-btn > span {
-    width: 20px;
-    height: 1px;
-    font-size: 0;
-    background-size: auto 1px;
+  .hamburger-btn-wrapper a {
+    width: 25px;
+    height: 2px;
+    background: #2498B3;
+    background-size: auto 2px;
     position: absolute;
-    left: calc(50% - 10px);
+    left: calc(50% - 12.5px);
     top: 50%;
     transition: 0.2s;
   }
-  .hamburger-btn.is-open::before {
+  .hamburger-btn-wrapper.is-open {
+    background: #2498B3;
+  }
+  .hamburger-btn-wrapper.is-open::before {
+    background: #FFF;
     transform: rotate(45deg);
     top: 22px;
   }
-  .hamburger-btn.is-open::after {
+  .hamburger-btn-wrapper.is-open::after {
+    background: #FFF;
     transform: rotate(-45deg);
     top: 22px;
   }
-  .hamburger-btn.is-open > span {
+  .hamburger-btn-wrapper.is-open > a {
     background: none;
   }
 }

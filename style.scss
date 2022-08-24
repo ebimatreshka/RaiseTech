@@ -146,60 +146,118 @@ strong {
     }    
 }
 
-.hamburger-btn {
-    display: none;
-    //レスポンシブ④
+.hamburger-btn-wrapper {
+    //display: none;
+    //レスポンシブ④ハンバーガーボタン
     @include btn {
-        display: block;
-        //レスポンシブ
-        //④ボタン作り
-        position: relative;
         width: 50px;
         height: 50px;
-        background-color: deeppink;
+        background-color: $white-color;
+        position: relative;
         &::before,
         &::after {
             content: "";
-            width: 20px;
-            height: 1px;
+            width: 25px;
+            height: 2px;
             background: $blue-color;
             position: absolute;
-            left: calc( 50% - 20px / 2);
+            left: calc( 50% - 25px / 2);
             display: block;
             transition: transform 0.2s;
         }
         &::before {
-            top: 12px;
+            top: 15px;
         }
         &::after {
-            top: 32px
+            top: 34px
         }
-        > span {
-            width: 20px;
-            height: 1px;
-            font-size: 0;
-            background-size: auto 1px;
+        a {
+            width: 25px;
+            height: 2px;
+            background: $blue-color;
+            background-size: auto 2px;
             position: absolute;
-            left: calc( 50% - 20px / 2 );
+            left: calc( 50% - 25px / 2 );
             top: 50%;
             transition: 0.2s;
         }
         &.is-open {
+            background: $blue-color;
             &::before {
+                background: $white-color;
                 transform: rotate( 45deg );
                 top: 22px;
             }
             &::after {
+                background: $white-color;
                 transform: rotate( -45deg );
                 top: 22px;
             }
-            > span {
+            > a {
                 background: none;
             }
         }
-    }
 
+    }
 }
+
+// .hamburger-btn {
+//     display: none;
+//     //レスポンシブ④
+//     @include btn {
+//         //レスポンシブ
+//         //④ボタン作り
+//         display: block;
+//         position: absolute;
+        //top: 20px;
+        // left: -43px;
+        // width: 50px;
+        // height: 50px;
+        // background: deeppink;
+        // &::before,
+        // &::after {
+        //     content: "";
+        //     width: 25px;
+        //     height: 2px;
+        //     background: $blue-color;
+        //     position: absolute;
+        //     left: calc( 50% - 25px / 2);
+        //     display: block;
+        //     transition: transform 0.2s;
+        // }
+        // &::before {
+        //     top: -8px;
+        // }
+        // &::after {
+        //     top: 8px
+        // }
+        // > a {
+        //     width: 25px;
+        //     height: 2px;
+        //     font-size: 0;
+        //     background: black;
+        //     background-size: auto 2px;
+        //     position: absolute;
+        //     left: calc( 50% - 25px / 2 );
+        //     top: 50%;
+        //     transition: 0.2s;
+        // }
+//         &.is-open {
+//             &::before {
+//                 transform: rotate( 45deg );
+//                 top: 0px;
+//             }
+//             &::after {
+//                 transform: rotate( -45deg );
+//                 top: 0px;
+//             }
+//             > a {
+//                 background: none;
+//             }
+//         }
+//     }
+
+// }
 
 .header-right-ul {
     height: 70px;
