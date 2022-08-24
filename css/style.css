@@ -100,8 +100,12 @@ strong {
   }
 }
 
+.hamburger-btn-wrapper {
+  display: none;
+}
 @media screen and (max-width: 1200px) {
   .hamburger-btn-wrapper {
+    display: block;
     width: 50px;
     height: 50px;
     background-color: #FFF;
@@ -149,6 +153,13 @@ strong {
   .hamburger-btn-wrapper.is-open > a {
     background: none;
   }
+}
+
+.nav {
+  display: none;
+}
+.nav.is-open {
+  display: block;
 }
 
 .header-right-ul {
