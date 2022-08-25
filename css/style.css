@@ -155,9 +155,6 @@ strong {
   }
 }
 
-.nav {
-  display: none;
-}
 .nav.is-open {
   display: block;
 }

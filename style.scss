@@ -202,12 +202,9 @@ strong {
     }
 }
 
-.nav {
-    display: none;
-    &.is-open {
-        display: block;
+.nav.is-open {
+    display: block;
     }
-}
 
 
 .header-right-ul {
