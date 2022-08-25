@@ -148,7 +148,7 @@ strong {
 
 .hamburger-btn-wrapper {
     display: none;
-    //レスポンシブ④ハンバーガーボタン作成
+    //レスポンシブ④ハンバーガーボタン
     @include btn {
         display: block;
         width: 50px;
@@ -158,11 +158,11 @@ strong {
         &::before,
         &::after {
             content: "";
-            width: 23px;
+            width: 25px;
             height: 2px;
             background: $blue-color;
             position: absolute;
-            left: calc( 50% - 23px / 2);
+            left: calc( 50% - 25px / 2);
             display: block;
             transition: transform 0.2s;
         }
@@ -173,12 +173,12 @@ strong {
             top: 34px
         }
         a {
-            width: 23px;
+            width: 25px;
             height: 2px;
             background: $blue-color;
             background-size: auto 2px;
             position: absolute;
-            left: calc( 50% - 23px / 2 );
+            left: calc( 50% - 25px / 2 );
             top: 50%;
             transition: 0.2s;
         }
@@ -251,36 +251,6 @@ strong {
     }
 }
 
-.btn-li {
-    position: relative;
-    @include btn {
-        a::before {
-            display: block;
-            content: "";
-            position: absolute;
-            top: 50%;
-            right: 13px;
-            width: 24px;
-            height: 2px;
-            margin-top: -1px;
-            background-color: $black-color;
-        }
-        a::after {
-            display: block;
-            content: "";
-            position: absolute;
-            top: 50%;
-            right: 24px;
-            width: 2px;
-            height: 24px;
-            margin-top: -12px;
-            background-color: $black-color;
-            
-        }
-    }
-}
-
-
 .vanished {
     //レスポンシブ
     //④ul消す
@@ -290,13 +260,6 @@ strong {
     }
 }
 
-//レスポンシブ④ +-ボタン作成
-.btn-li {
-    @include btn {
-        position: relative;
-        
-    }
-}
 
 .nav1 {
     //レスポンシブ④
