@@ -113,11 +113,11 @@ strong {
   }
   .hamburger-btn-wrapper::before, .hamburger-btn-wrapper::after {
     content: "";
-    width: 25px;
+    width: 23px;
     height: 2px;
     background: #2498B3;
     position: absolute;
-    left: calc(50% - 12.5px);
+    left: calc(50% - 11.5px);
     display: block;
     transition: transform 0.2s;
   }
@@ -128,12 +128,12 @@ strong {
     top: 34px;
   }
   .hamburger-btn-wrapper a {
-    width: 25px;
+    width: 23px;
     height: 2px;
     background: #2498B3;
     background-size: auto 2px;
     position: absolute;
-    left: calc(50% - 12.5px);
+    left: calc(50% - 11.5px);
     top: 50%;
     transition: 0.2s;
   }
@@ -201,9 +201,43 @@ strong {
   }
 }
 
+.btn-li {
+  position: relative;
+}
+@media screen and (max-width: 1200px) {
+  .btn-li a::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    width: 24px;
+    height: 2px;
+    margin-top: -1px;
+    background-color: #121212;
+  }
+  .btn-li a::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    width: 2px;
+    height: 24px;
+    margin-top: -12px;
+    background-color: #121212;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .vanished {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .btn-li {
+    position: relative;
   }
 }
 
