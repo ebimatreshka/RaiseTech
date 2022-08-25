@@ -78,9 +78,8 @@ a {
     left: 0;
     z-index: 1100;
     background-color: $white-color;
-    //レスポンシブ
     @include btn {
-        height: 50px;//①ヘッダーの高さが変わる
+        height: 50px;           //①ヘッダーの高さが変わる
     }
 
     //ヘッダー左側
@@ -98,7 +97,7 @@ a {
             height: 33px;
             width: auto;
             @include btn {
-                height: 30px;//②ロゴ小さくなる②
+                height: 30px;      //②ロゴ小さくなる②
             }
         }
     }
@@ -109,7 +108,7 @@ a {
     &-left-RT {
         margin: 0 0 0 21px;
         @include btn {
-        margin: 10px;//②ロゴのmargin
+        margin: 10px;               //②ロゴのmargin
         }
     }
     &-left-comment {
@@ -117,10 +116,8 @@ a {
         font-size: 1.4rem;
         line-height: 1.3;
         margin-left: 16px;                
-        //レスポンシブ
-        //『最速で』が消える
         @include vanished {
-            display: none;
+            display: none;          //『最速で』が消える
         }        
     }
 }
@@ -137,20 +134,17 @@ strong {
     &-right {
         font-weight: 700;
         height: 70px;
-        //レスポンシブ
-        //①ヘッダーの高さが変わる
         @include btn {
         display: block;
-        height: 50px;
+        height: 50px;               //①ヘッダーの高さが変わる
         }
     }    
 }
 
 .hamburger-btn-wrapper {
     display: none;
-    //レスポンシブ④ハンバーガーボタン
     @include btn {
-        display: block;
+        display: block;             //④ハンバーガーボタン
         width: 50px;
         height: 50px;
         background-color: $white-color;
@@ -211,11 +205,9 @@ strong {
     height: 70px;
     display: flex;
     align-items: center;
-    //レスポンシブ
-    //④navメニューのために
     @include btn {
         //display: none;
-        position: absolute;
+        position: absolute;         //④navメニューのために
         top: 50px;
         left: 0;
         display: table;
@@ -227,37 +219,32 @@ strong {
         line-height: 70px;
         padding: 0 15px;
         transition: padding 0.5s ease;
-        //レスポンシブ
         @include padding {
         padding: 0 10px;
         }
-        //①ヘッダーの高さ
         @include btn {
-        height: 50px;
+        height: 50px;                     //①ヘッダーの高さ
         line-height: 50px;
-        //④横幅いっぱい、背景
-        width: 100vw;
+        width: 100vw;                    //④横幅いっぱい、背景
         }            
     }
 }
 
 .header-right-ul li {
-    //レスポンシブ④listを白く
+   
     @include btn {
-        background-color: $white-color;
+        background-color: $white-color;      //④listを白く
     }
 }
 
 .vanished {
-    //レスポンシブ
-    //④ul消す
     @include btn {
-        //display: none;
+        //display: none;                //④ul消す
         flex-direction: column;
     }
 }
 
-.header-hover {
+.header-hover {                 //＋ボタン作成
     position: relative;
     >a::before {
         @include btn {          //＋ボタンの横
@@ -287,9 +274,24 @@ strong {
     }
 }
 
+.open {         //-ボタン作成
+    .nav1::before {
+    @include btn {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 23px;
+        right: 38px;
+        width: 24px;
+        height: 2px;
+        margin-top: -1px;
+        background-color: $black-color;
+        }
+    }
+}
+
 
 .nav1 {
-    //レスポンシブ④
     @include btn {
         height: auto;
         padding: 10px;
@@ -315,7 +317,6 @@ strong {
         color: $blue-color;
         background-color: #FFF;
         text-decoration: none;
-        //レスポンシブ④
         @include btn {
             color: $black-color;
             background-color: #f3fafb;
@@ -328,7 +329,6 @@ strong {
     &-right-last {
         background-color: $blue-color;
         color: $white-color;
-        //レスポンシブ
         @include padding {
             padding: 0 10px;
         }
@@ -350,17 +350,15 @@ strong {
     position: absolute;
     top: 70px;
     display: none;
-    //レスポンシブ④ リストを縦に
     @include btn {
-        position: static;
+        position: static;           //④リストを縦に
     }
     .nav-menu-li {
         font-weight: normal;
         background-color: #E9F8FB;
         white-space: nowrap;
-        //レスポンシブ④背景
         @include btn {
-            background-color: $white-color;
+            background-color: $white-color;     //④背景
         }
 
     }
@@ -385,9 +383,8 @@ strong {
 .header-right {
     li:hover {
     background-color: #D4F1F8;
-    //レスポンシブ④
     @include btn {
-        background-color: #f3fafb;
+        background-color: #f3fafb;          //④
     }
     }
 }
