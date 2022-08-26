@@ -11,7 +11,6 @@ $(function() {
 $('.hamburger-btn-wrapper').on('click',function() {
     $(this).toggleClass('is-open');
     $('.nav').toggleClass('is-open');
-    // $('body').toggleClass('is-open');
 });
 
 //+-ボタン

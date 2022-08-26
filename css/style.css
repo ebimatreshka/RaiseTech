@@ -155,8 +155,13 @@ strong {
   }
 }
 
-.nav.is-open {
-  display: block;
+.nav {
+  display: none;
+}
+@media screen and (max-width: 1200px) {
+  .nav .is-open {
+    display: block;
+  }
 }
 
 .header-right-ul {
@@ -200,6 +205,7 @@ strong {
 
 @media screen and (max-width: 1200px) {
   .vanished {
+    display: none;
     flex-direction: column;
   }
 }

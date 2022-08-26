@@ -149,8 +149,8 @@ strong {
         height: 50px;
         background-color: $white-color;
         position: relative;
-        &::before,
-        &::after {
+        &::before,                  //上の線
+        &::after {                  //下の線
             content: "";
             width: 25px;
             height: 2px;
@@ -196,9 +196,14 @@ strong {
     }
 }
 
-.nav.is-open {
-    display: block;
+.nav {
+    display: none;
+    .is-open {
+    @include btn {
+        display: block;
+        }
     }
+}
 
 
 .header-right-ul {
@@ -239,10 +244,12 @@ strong {
 
 .vanished {
     @include btn {
-        //display: none;                //④ul消す
+        display: none;                //④ul消す
         flex-direction: column;
     }
 }
+
+
 
 .header-hover {                 //＋ボタン作成
     position: relative;
@@ -274,7 +281,7 @@ strong {
     }
 }
 
-.open {         //-ボタン作成
+.open {                          //-ボタン作成
     .nav1::before {
     @include btn {
         display: block;
