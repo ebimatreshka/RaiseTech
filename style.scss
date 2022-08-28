@@ -262,6 +262,7 @@ strong {
             height: 2px;
             margin-top: -1px;
             background-color: $black-color;
+            z-index: 10;        //−ボタンが浮き出てきた
         }
     }
     >a::after {
@@ -278,6 +279,23 @@ strong {
         }
     }
 }
+
+.open:hover >a {
+    position: relative;
+    &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 50px;
+        height: auto;
+        margin-top: 0;
+        background-color: #F3FAFB;
+    }
+}
+
 
 // .open {         //-ボタン作成
 //     .nav1::before {
@@ -310,11 +328,11 @@ strong {
     }
 }
 
-.nav-menu-li {
-    @include btn {
-        padding: 0 0 0 25px;
-    }
-}
+// .nav-menu-li {
+//     @include btn {
+//         padding: 0 0 0 25px;
+//     }
+// }
 
 //hoverした時のheaderのlist
 .header-right .nav-menu-li {

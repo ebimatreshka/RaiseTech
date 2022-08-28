@@ -14,14 +14,14 @@ $('.hamburger-btn-wrapper').on('click',function() {
 });
 
 //+-ボタン
-$('.header-hover').hover(function() {
-    $(this).removeClass('open');
-},
-function() {
-    $(this).addClass('close');
-});
-
-
 // $('.header-hover').hover(function() {
-//     $(this).toggleClass('open');
-// })
+//     $(this).removeClass('open');
+// },
+// function() {
+//     $(this).addClass('close');
+// });
+
+
+$('.header-hover').hover(function() {
+    $(this).toggleClass('open');
+})
