@@ -254,7 +254,11 @@ strong {
   width: 50px;
   height: auto;
   margin-top: 0;
-  background-color: #F7F7F7;
+}
+@media screen and (max-width: 1200px) {
+  .open:hover > a::after {
+    background-color: #F7F7F7;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -268,6 +272,12 @@ strong {
 @media screen and (max-width: 1200px) {
   .nav1:hover {
     background-color: #f3fafb;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-menu-li {
+    padding: 0 0 0 0;
   }
 }
 

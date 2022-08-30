@@ -44,7 +44,7 @@ $mobile: 767px; //スマホ表示(絵、文字、ボタン)絵は一つづつ �
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;         //要素の幅と高さにpaddingとborderを含めるという意味
 }
 html {
     font-size: 62.5%;
@@ -292,7 +292,9 @@ strong {
         width: 50px;
         height: auto;
         margin-top: 0;
-        background-color: #F7F7F7;  //hover時のグレーの背景色
+        @include btn {
+            background-color: #F7F7F7;  //hover時のグレーの背景色
+        }
     }
 }
 
@@ -328,11 +330,11 @@ strong {
     }
 }
 
-// .nav-menu-li {
-//     @include btn {
-//         padding: 0 0 0 25px;
-//     }
-// }
+.nav-menu-li {
+    @include btn {
+        padding: 0 0 0 0;           // 0 0 0 25pxにしたらhoverした時に+が右にずれて見えなくなった
+    }
+}
 
 //hoverした時のheaderのlist
 .header-right .nav-menu-li {
@@ -411,8 +413,6 @@ strong {
     }
     }
 }
-
-
 
 
 
