@@ -511,6 +511,9 @@ strong {
     background-position: center center;
     background-size: cover; //要素がすき間なく埋まるように縦横比を保ちながら背景画像を表示
     background-attachment: fixed;   //画像固定
+    @include btn {
+        height: 300px;
+    }
     .main-img {
         position: absolute;
         top: 0;
@@ -524,9 +527,12 @@ strong {
         align-items: flex-start;
         justify-content: center;
         padding-top: 150px; //お手本は80px
+        @include mobile {
+            background-size: cover;
+        }
     }
     .main-img-layer1 {
-        background: transparent url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero2.png) no-repeat -305px -5px;//子供達
+        background: transparent url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero2.png) no-repeat center -5px;//子供達
     }
 }
 
@@ -537,6 +543,13 @@ strong {
     text-align: center;
     padding: 40px 40px 19px 40px;
     border-radius: 10px;
+    @include mobile {
+        width: 100%;
+        max-width: 100%;
+        padding: 9px 0 13px;
+        border-radius: 0;
+    }
+    }
     h1 {
         margin-top: 0;
         margin-bottom: 0.5rem;
@@ -544,11 +557,18 @@ strong {
             width: 280px;
             height: auto;
             vertical-align: middle;  //要素を中央揃え
+            @include mobile {
+                display: none;
+            }
         }
     }
     p {
         margin: 1.3em 0 0.5em;
         font-weight: 700;
+        @include mobile {
+            margin: 0.5em 0;
+            font-size: 1.3rem;
+        }
     }
     .p-btn {
         line-height: 1;
@@ -563,10 +583,13 @@ strong {
             font-weight: 700;
             border: solid 1px #c3c3c3;
             color: #fff;
-            
+            @include mobile {
+                padding: 12px 18px;
+                font-size: 1.6rem;
+            }
         }
     }
-}
+
 
 
 
@@ -611,6 +634,7 @@ strong {
         border-radius: 50%;
         background-color: $white-color;
         position: relative;
+        z-index: 300;
     }
     i {
         width: 240px;

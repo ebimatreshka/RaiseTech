@@ -370,6 +370,11 @@ strong {
   background-size: cover;
   background-attachment: fixed;
 }
+@media screen and (max-width: 1200px) {
+  .main-blue {
+    height: 300px;
+  }
+}
 .main-blue .main-img {
   position: absolute;
   top: 0;
@@ -384,8 +389,13 @@ strong {
   justify-content: center;
   padding-top: 150px;
 }
+@media screen and (max-width: 767px) {
+  .main-blue .wrapper-inner1-center {
+    background-size: cover;
+  }
+}
 .main-blue .main-img-layer1 {
-  background: transparent url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero2.png) no-repeat -305px -5px;
+  background: transparent url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero2.png) no-repeat center -5px;
 }
 
 .inner1-center {
@@ -395,24 +405,46 @@ strong {
   padding: 40px 40px 19px 40px;
   border-radius: 10px;
 }
-.inner1-center h1 {
+@media screen and (max-width: 767px) {
+  .inner1-center {
+    width: 100%;
+    max-width: 100%;
+    padding: 9px 0 13px;
+    border-radius: 0;
+  }
+}
+
+h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
-.inner1-center h1 img {
+h1 img {
   width: 280px;
   height: auto;
   vertical-align: middle;
 }
-.inner1-center p {
+@media screen and (max-width: 767px) {
+  h1 img {
+    display: none;
+  }
+}
+
+p {
   margin: 1.3em 0 0.5em;
   font-weight: 700;
 }
-.inner1-center .p-btn {
+@media screen and (max-width: 767px) {
+  p {
+    margin: 0.5em 0;
+    font-size: 1.3rem;
+  }
+}
+
+.p-btn {
   line-height: 1;
   display: inline-block;
 }
-.inner1-center .p-btn a {
+.p-btn a {
   padding: 24.5px 37px;
   font-size: 1.8rem;
   background-color: #2498B3;
@@ -422,6 +454,12 @@ strong {
   font-weight: 700;
   border: solid 1px #c3c3c3;
   color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .p-btn a {
+    padding: 12px 18px;
+    font-size: 1.6rem;
+  }
 }
 
 .section {
@@ -463,6 +501,7 @@ strong {
   border-radius: 50%;
   background-color: #FFF;
   position: relative;
+  z-index: 300;
 }
 .section1-item i,
 .section2-item i,
