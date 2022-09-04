@@ -110,6 +110,7 @@ strong {
     height: 50px;
     background-color: #FFF;
     position: relative;
+    transition: 0.5s;
   }
   .hamburger-btn-wrapper::before, .hamburger-btn-wrapper::after {
     content: "";
@@ -142,12 +143,12 @@ strong {
   }
   .hamburger-btn-wrapper.is-open::before {
     background: #FFF;
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
     top: 22px;
   }
   .hamburger-btn-wrapper.is-open::after {
     background: #FFF;
-    transform: rotate(-45deg);
+    transform: rotate(-135deg);
     top: 22px;
   }
   .hamburger-btn-wrapper.is-open > a {
@@ -392,6 +393,12 @@ strong {
   justify-content: center;
   padding-top: 150px;
 }
+@media screen and (max-width: 1200px) {
+  .main-blue .wrapper-inner1-center {
+    background-position: center -25px;
+    padding-top: 131px;
+  }
+}
 @media screen and (max-width: 767px) {
   .main-blue .wrapper-inner1-center {
     background-size: cover;
@@ -401,6 +408,11 @@ strong {
 }
 .main-blue .main-img-layer1 {
   background: transparent url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero2.png) no-repeat center -5px;
+}
+@media screen and (max-width: 1200px) {
+  .main-blue .main-img-layer1 {
+    background-position: center -25px;
+  }
 }
 @media screen and (max-width: 767px) {
   .main-blue .main-img-layer1 {
@@ -490,7 +502,7 @@ strong {
 }
 .section-wrapper {
   max-width: 1078px;
-  margin: -173px auto 0;
+  margin: -77px auto 0;
 }
 .section-box {
   display: flex;
@@ -513,8 +525,7 @@ strong {
 }
 @media screen and (max-width: 1078px) {
   .section1-content, .section2-content, .section3-content {
-    width: 29.33%;
-    margin: -160px 2%;
+    margin: -160px auto;
   }
 }
 @media screen and (max-width: 767px) {

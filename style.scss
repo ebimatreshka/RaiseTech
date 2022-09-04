@@ -149,6 +149,7 @@ strong {
         height: 50px;
         background-color: $white-color;
         position: relative;
+        transition: 0.5s;
         &::before,
         &::after {
             content: "";
@@ -180,12 +181,12 @@ strong {
             background: $blue-color;
             &::before {
                 background: $white-color;
-                transform: rotate( 45deg );
+                transform: rotate( -45deg );
                 top: 22px;
             }
             &::after {
                 background: $white-color;
-                transform: rotate( -45deg );
+                transform: rotate( -135deg );
                 top: 22px;
             }
             > a {
@@ -530,6 +531,10 @@ strong {
         align-items: flex-start;
         justify-content: center;
         padding-top: 150px; //お手本は80px
+        @include btn {
+            background-position: center -25px;
+            padding-top: 131px;
+        }
         @include mobile {
             background-size: cover;
             align-items: flex-end;
@@ -539,6 +544,9 @@ strong {
     }
     .main-img-layer1 {
         background: transparent url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero2.png) no-repeat center -5px;//子供達
+        @include btn {
+            background-position: center -25px;
+        }
         @include mobile {
             background-size: cover;
             background-position: center -23px;
@@ -620,7 +628,7 @@ strong {
     }
     &-wrapper {
         max-width: 1078px;
-        margin: -173px auto 0;    //お手本は 0 auto
+        margin: -77px auto 0;    //お手本は 0 auto
     }
     &-box {
         display: flex;
@@ -645,8 +653,9 @@ strong {
         margin-top: -160px;
         z-index: 300;
         @include circle{
-        width: 29.33%;
-        margin: -160px 2%;   //真ん中に寄っていく
+        // width: 29.33%;
+        // margin: -160px 2%;   //真ん中に寄っていく
+        margin: -160px auto;
         }
         @include mobile {
             margin-top: 0;
