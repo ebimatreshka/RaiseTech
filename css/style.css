@@ -481,7 +481,7 @@ strong {
 .section {
   color: #FFF;
   background-color: #000000;
-  padding: 144px 0 90px 0;
+  padding: 144px 0 58px 0;
 }
 @media screen and (max-width: 767px) {
   .section {
@@ -514,6 +514,7 @@ strong {
 @media screen and (max-width: 1078px) {
   .section1-content, .section2-content, .section3-content {
     width: 29.33%;
+    margin: -160px 2%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -563,6 +564,7 @@ strong {
 .section2-h2,
 .section3-h2 {
   text-align: center;
+  margin: 0.2em 0 0 0;
 }
 
 .section1-info,
@@ -570,6 +572,7 @@ strong {
 .section3-info {
   line-height: 1.7;
   font-weight: 700;
+  margin: 0.5rem 0 0 0;
 }
 @media screen and (max-width: 767px) {
   .section1-info,
