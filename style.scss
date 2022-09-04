@@ -42,8 +42,8 @@ $mobile: 767px; //スマホ表示(絵、文字、ボタン)絵は一つづつ �
 
 
 * {
-    margin : 0;
-    padding: 0;
+    margin    : 0;
+    padding   : 0;
     box-sizing: border-box;         //要素の幅と高さにpaddingとborderを含めるという意味
 }
 html {
@@ -56,7 +56,7 @@ body {
     font-weight: 400;
     line-height: 1.7;
     color      : $black-color;
-    overflow-x: hidden;
+    overflow-x : hidden;
 }
 ul { 
     list-style: none;
@@ -113,7 +113,7 @@ a {
     }
     &-left-comment {
         font-weight: 900;
-        font-size: 1.4rem;
+        font-size  : 1.4rem;
         line-height: 1.3;
         margin-left: 16px;                
         @include vanished {
@@ -123,7 +123,7 @@ a {
 }
 
 strong {
-    font-size: 1.8rem;
+    font-size  : 1.8rem;
     font-weight: bolder;
 }
 
@@ -133,10 +133,10 @@ strong {
 .header {
     &-right {
         font-weight: 700;
-        height: 70px;
+        height     : 70px;
         @include btn {
-        display: block;
-        height: 50px;               //①ヘッダーの高さが変わる
+        display    : block;
+        height     : 50px;               //①ヘッダーの高さが変わる
         }
     }    
 }
@@ -144,21 +144,21 @@ strong {
 .hamburger-btn-wrapper {
     display: none;
     @include btn {
-        display: block;             //④ハンバーガーボタン
-        width: 50px;
-        height: 50px;
+        display         : block;             //④ハンバーガーボタン
+        width           : 50px;
+        height          : 50px;
         background-color: $white-color;
-        position: relative;
+        position        : relative;
         transition: 0.5s;
         &::before,
         &::after {
-            content: "";
-            width: 25px;
-            height: 2px;
+            content   : "";
+            width     : 25px;
+            height    : 2px;
             background: $blue-color;
-            position: absolute;
-            left: calc( 50% - 25px / 2);
-            display: block;
+            position  : absolute;
+            left      : calc( 50% - 25px / 2);
+            display   : block;
             transition: transform 0.2s;
         }
         &::before {
@@ -168,25 +168,25 @@ strong {
             top: 34px
         }
         a {
-            width: 25px;
-            height: 2px;
-            background: $blue-color;
+            width          : 25px;
+            height         : 2px;
+            background     : $blue-color;
             background-size: auto 2px;
-            position: absolute;
-            left: calc( 50% - 25px / 2 );
-            top: 50%;
-            transition: 0.2s;
+            position       : absolute;
+            left           : calc( 50% - 25px / 2 );
+            top            : 50%;
+            transition     : 0.2s;
         }
         &.is-open {
             background: $blue-color;
             &::before {
                 background: $white-color;
-                transform: rotate( -45deg );
+                transform : rotate( -45deg );
                 top: 22px;
             }
             &::after {
                 background: $white-color;
-                transform: rotate( -135deg );
+                transform : rotate( -135deg );
                 top: 22px;
             }
             > a {
@@ -208,30 +208,30 @@ strong {
 
 
 .header-right-ul {
-    height: 70px;
-    display: flex;
+    height     : 70px;
+    display    : flex;
     align-items: center;
     @include btn {
-        //display: none;
-        position: absolute;         //④navメニューのために
-        top: 50px;
-        left: 0;
-        display: table;
+        //display   : none;
+        position    : absolute;         //④navメニューのために
+        top         : 50px;
+        left        : 0;
+        display     : table;
         table-layout: fixed;
     }
     a {
         display: block;
-        //height: 70px;
+        //height   : 70px;
         line-height: 70px;
-        padding: 0 15px;
-        transition: padding 0.5s ease;
+        padding    : 0 15px;
+        transition : padding 0.5s ease;
         @include padding {
-        padding: 0 10px;
+        padding    : 0 10px;
         }
         @include btn {
-        height: 50px;                     //①ヘッダーの高さ
+        height     : 50px;                     //①ヘッダーの高さ
         line-height: 50px;
-        width: 100vw;                    //④横幅いっぱい、背景
+        width      : 100vw;                    //④横幅いっぱい、背景
         }            
     }
 }
@@ -254,28 +254,28 @@ strong {
     position: relative;
     >a::before {
         @include btn {          //＋ボタンの横
-            display: block;
-            content: "";
-            position: absolute;
-            top: 50%;
-            right: 13px;
-            width: 24px;
-            height: 2px;
-            margin-top: -1px;
+            display         : block;
+            content         : "";
+            position        : absolute;
+            top             : 50%;
+            right           : 13px;
+            width           : 24px;
+            height          : 2px;
+            margin-top      : -1px;
             background-color: $black-color;
-            z-index: 10;        //−ボタンが浮き出てきた
+            z-index         : 10;        //−ボタンが浮き出てきた
         }
     }
     >a::after {
         @include btn {          //＋ボタンの縦
-            display: block;
-            content: "";
-            position: absolute;
-            top: 50%;
-            right: 24px;
-            width: 2px;
-            height: 24px;
-            margin-top: -12px;
+            display         : block;
+            content         : "";
+            position        : absolute;
+            top             : 50%;
+            right           : 24px;
+            width           : 2px;
+            height          : 24px;
+            margin-top      : -12px;
             background-color: $black-color;
         }
     }
@@ -284,14 +284,14 @@ strong {
 .open:hover >a {
     position: relative;
     &::after {
-        display: block;
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        width: 50px;
-        height: auto;
+        display   : block;
+        content   : "";
+        position  : absolute;
+        top       : 0;
+        bottom    : 0;
+        right     : 0;
+        width     : 50px;
+        height    : auto;
         margin-top: 0;
         @include btn {
             background-color: #F7F7F7;  //hover時のグレーの背景色
@@ -319,8 +319,8 @@ strong {
 
 .nav1 {
     @include btn {
-        height: auto;
-        padding: 10px;
+        height          : auto;
+        padding         : 10px;
         background-color: $white-color;
     }
 }
@@ -340,11 +340,11 @@ strong {
 //hoverした時のheaderのlist
 .header-right .nav-menu-li {
     a:hover {
-        color: $blue-color;
-        background-color: #FFF;
-        text-decoration: none;
+        color               : $blue-color;
+        background-color    : #FFF;
+        text-decoration     : none;
         @include btn {
-            color: $black-color;
+            color           : $black-color;
             background-color: #f3fafb;
         }
     }
@@ -354,9 +354,9 @@ strong {
 .header {
     &-right-last {
         background-color: $blue-color;
-        color: $white-color;
+        color           : $white-color;
         @include padding {
-            padding: 0 10px;
+            padding     : 0 10px;
         }
     }
 }  
@@ -373,20 +373,19 @@ strong {
 }
 .nav-menu1 {
     flex-direction: column;
-    position: absolute;
-    top: 70px;
-    display: none;
+    position      : absolute;
+    top           : 70px;
+    display       : none;
     @include btn {
-        position: static;           //④リストを縦に
+        position  : static;           //④リストを縦に
     }
     .nav-menu-li {
-        font-weight: normal;
-        background-color: #E9F8FB;
-        white-space: nowrap;
+        font-weight         : normal;
+        background-color    : #E9F8FB;
+        white-space         : nowrap;
         @include btn {
             background-color: $white-color;     //④背景
         }
-
     }
 }
 
@@ -395,12 +394,12 @@ strong {
 }
 .nav-menu2 {
     flex-direction: column;
-    position: absolute;
-    top: 70px;
+    position      : absolute;
+    top           : 70px;
     .nav-menu-li {
-        font-weight: normal;
+        font-weight     : normal;
         background-color: #E9F8FB;
-        white-space: nowrap;
+        white-space     : nowrap;
     }
 }
 
@@ -408,7 +407,7 @@ strong {
 //hoverした時のheaderのlist
 .header-right {
     li:hover {
-    background-color: #D4F1F8;
+    background-color    : #D4F1F8;
     @include btn {
         background-color: #f3fafb;          //④
     }
@@ -501,56 +500,56 @@ strong {
 //     }
 // }
 
-//実験
+//メイン　背景画像
 .main-blue {
-    position: relative;
-    height: 707px;  //お手本は650px
-    overflow: hidden;
-    background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero3.png);//背景画像
-    background-color: transparent;  //透過
-    background-repeat: no-repeat;   //繰り返し
+    position           : relative;
+    height             : 707px;  //お手本は650px
+    overflow           : hidden;
+    background-image   : url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero3.png);//背景画像
+    background-color   : transparent;  //透過
+    background-repeat  : no-repeat;   //繰り返し
     background-position: center center;
-    background-size: cover; //要素がすき間なく埋まるように縦横比を保ちながら背景画像を表示
+    background-size    : cover; //要素がすき間なく埋まるように縦横比を保ちながら背景画像を表示
     background-attachment: fixed;   //画像固定
     @include mobile {
-        height: 300px;
-        padding-bottom: 320px;
+        height             : 300px;
+        padding-bottom     : 320px;
         background-position: center -25px;
-        margin: 49px 0 -9px;
+        margin             : 49px 0 -9px;
     }
     .main-img {
         position: absolute;
-        top: 0;
-        width: 100%;
+        top     : 0;
+        width   : 100%;
         height: 100%;
     }
     .wrapper-inner1-center {
-        background: transparent url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero1.png) no-repeat center -5px;//tekkun
-        z-index: 200;
-        display: flex;
-        align-items: flex-start;
+        background     : transparent url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero1.png) no-repeat center -5px;//tekkun
+        z-index        : 200;
+        display        : flex;
+        align-items    : flex-start;
         justify-content: center;
-        padding-top: 150px; //お手本は80px
+        padding-top    : 150px; //お手本は80px
         @include btn {
             background-position: center -25px;
-            padding-top: 130px;
+            padding-top        : 130px;
         }
         @include mobile {
-            background-size: cover;
-            align-items: flex-end;
+            background-size    : cover;
+            align-items        : flex-end;
             background-position: center -27px;
-            // margin-top: 15px;
+            // margin-top      : 15px;
         }
     }
     .main-img-layer1 {
-        background: transparent url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero2.png) no-repeat center -5px;//子供達
+        background             : transparent url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero2.png) no-repeat center -5px;//子供達
         @include btn {
             background-position: center -25px;
         }
         @include mobile {
-            background-size: cover;
+            background-size    : cover;
             background-position: center -23px;
-            margin: 0 0 -3px;
+            margin             : 0 0 -3px;
         }
     }
 }
@@ -563,59 +562,59 @@ strong {
 
 //真ん中の白い囲み
 .inner1-center {
-    max-width: 530px;
-    background-color: #fff;
-    text-align: center;
-    padding: 40px 40px 19px 40px;
-    border-radius: 10px;
+    max-width        : 530px;
+    background-color : #fff;
+    text-align       : center;
+    padding          : 40px 40px 19px 40px;
+    border-radius    : 10px;
     @include mobile {
-        width: 100%;
-        max-width: 100%;
-        padding: 9px 0 13px 0;
+        width        : 100%;
+        max-width    : 100%;
+        padding      : 9px 0 13px 0;
         border-radius: 0; 
-        // margin: 2px 0 12px;
+        // margin    : 2px 0 12px;
     }
     h1 {
         margin-top: 0;
         margin-bottom: 0.5rem;
         img {
-            width: 280px;
-            height: auto;
+            width         : 280px;
+            height        : auto;
             vertical-align: middle;  //要素を中央揃え
             @include mobile {
-                display: none;
+                display   : none;
             }
         }
     }
     p {
-        margin: 1.3em 0 0.5em;
-        font-weight: 700;
+        margin       : 1.3em 0 0.5em;
+        font-weight  : 700;
         @include mobile {
-            margin: 6.5px 0;
+            margin   : 6.5px 0;
             font-size: 13px;
         }
     }
     .p-btn {
-        line-height: 1;
-        display: inline-block;
+        line-height  : 1;
+        display      : inline-block;
         @include mobile {
-            margin: 6.5px 0;
+            margin   : 6.5px 0;
             font-size: 13px;
         }
         a {
-            padding: 24.5px 37px;
-            font-size: 1.8rem;
+            padding         : 24.5px 37px;
+            font-size       : 1.8rem;
             background-color: $blue-color;
-            border-color: $blue-color;
-            border-radius: 4px;
-            display: block;
-            font-weight: 700;
-            border: solid 1px #c3c3c3;
-            color: #fff;
-            transition: 0.7s;
+            border-color    : $blue-color;
+            border-radius   : 4px;
+            display         : block;
+            font-weight     : 700;
+            border          : solid 1px #c3c3c3;
+            color           : #fff;
+            transition      : 0.7s;
             @include mobile {
-                padding: 12px 18px;
-                font-size: 1.6rem;
+                padding     : 12px 18px;
+                font-size   : 1.6rem;
             }
         }
     }
@@ -626,15 +625,15 @@ strong {
 
 //セクション
 .section {
-    color: $white-color;
+    color           : $white-color;
     background-color: #000000;
-    padding: 144px 0 58px 0;    //元は64px 0 64px 0;
+    padding         : 144px 0 58px 0;    //元は64px 0 64px 0;
     @include mobile {
-        margin: 8px 0 0;
+        margin      : 8px 0 0;
     }
     &-wrapper {
         max-width: 1078px;
-        margin: -172px auto 0;    //お手本は 0 auto
+        margin   : -172px auto 0;    //お手本は 0 auto
         @include btn {
             margin: -193px auto 0;
         }
@@ -643,14 +642,14 @@ strong {
         }
     }
     &-box {
-        display: flex;
+        display        : flex;
         justify-content: center;
-        align-items: flex-start;
-        // width: 100vw;
+        align-items    : flex-start;
+        // width       : 100vw;
         @include mobile {
-            display: flex;
+            display       : flex;
             flex-direction: column;
-            align-items: center;
+            align-items   : center;
 
         }
     }
@@ -660,19 +659,19 @@ strong {
     &1-content,
     &2-content,
     &3-content {
-        margin: 0 50px;
-        width: 229px;
+        margin    : 0 50px;
+        width     : 229px;
         margin-top: -160px;
-        z-index: 300;
+        z-index   : 300;
         @include circle{
-        // width: 29.33%;
+        // width : 29.33%;
         // margin: -160px 2%;   //真ん中に寄っていく
-        margin: -160px auto;
+        margin   : -160px auto;
         }
         @include mobile {
-            margin-top: 0;
+            margin-top   : 0;
             margin-bottom: 40px;
-            width: auto;
+            width        : auto;
         }
     }
 }
@@ -683,24 +682,24 @@ strong {
 .section3-item {
     text-align: center;
     p {
-        width: 230px;
-        height: 230px;
-        color: #000000;
-        border: solid 6px #000000;
-        border-radius: 50%;
+        width           : 230px;
+        height          : 230px;
+        color           : #000000;
+        border          : solid 6px #000000;
+        border-radius   : 50%;
         background-color: $white-color;
-        position: relative;
+        position        : relative;
         @include mobile {
-            margin: 0 auto;
+            margin      : 0 auto;
         }
     }
     i {
-        width: 240px;
-        height: 240px;
+        width    : 240px;
+        height   : 240px;
         font-size: 10rem;
-        position: absolute;
-        top: 50%;
-        left: 50%;
+        position : absolute;
+        top      : 50%;
+        left     : 50%;
         transform: translate(-50%, -25%);
     }
 }
@@ -709,19 +708,19 @@ strong {
 .section2-h2,
 .section3-h2 {
     text-align: center;
-    margin: 0.2em 0 0 0;
+    margin    : 0.2em 0 0 0;
 }
 
 .section1-info,
 .section2-info,
 .section3-info {
-    //margin: 0.5em 0 0 0;
+    //margin   : 0.5em 0 0 0;
     line-height: 1.7;
     font-weight: 700;
-    margin: 0.5rem 0 0 0;
+    margin     : 0.5rem 0 0 0;
     @include mobile {
     white-space: pre-wrap;
-    margin: 0.5em 0 0 0;
+    margin     : 0.5em 0 0 0;
     line-height: 1.7;
     font-weight: 700;
     }
