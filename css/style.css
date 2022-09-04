@@ -497,12 +497,17 @@ strong {
 }
 @media screen and (max-width: 767px) {
   .section {
-    margin: 10px 0 0;
+    margin: 8px 0 0;
   }
 }
 .section-wrapper {
   max-width: 1078px;
-  margin: -77px auto 0;
+  margin: -172px auto 0;
+}
+@media screen and (max-width: 767px) {
+  .section-wrapper {
+    margin: -78px auto 0;
+  }
 }
 .section-box {
   display: flex;

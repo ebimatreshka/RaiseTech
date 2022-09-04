@@ -624,11 +624,14 @@ strong {
     background-color: #000000;
     padding: 144px 0 58px 0;    //元は64px 0 64px 0;
     @include mobile {
-        margin: 10px 0 0;
+        margin: 8px 0 0;
     }
     &-wrapper {
         max-width: 1078px;
-        margin: -77px auto 0;    //お手本は 0 auto
+        margin: -172px auto 0;    //お手本は 0 auto
+        @include mobile {
+            margin: -78px auto 0;
+        }
     }
     &-box {
         display: flex;
