@@ -396,7 +396,7 @@ strong {
 @media screen and (max-width: 1200px) {
   .main-blue .wrapper-inner1-center {
     background-position: center -25px;
-    padding-top: 131px;
+    padding-top: 130px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -504,6 +504,11 @@ strong {
   max-width: 1078px;
   margin: -172px auto 0;
 }
+@media screen and (max-width: 1200px) {
+  .section-wrapper {
+    margin: -193px auto 0;
+  }
+}
 @media screen and (max-width: 767px) {
   .section-wrapper {
     margin: -78px auto 0;
@@ -594,7 +599,7 @@ strong {
   .section1-info,
 .section2-info,
 .section3-info {
-    white-space: nowrap;
+    white-space: pre-wrap;
     margin: 0.5em 0 0 0;
     line-height: 1.7;
     font-weight: 700;

@@ -533,7 +533,7 @@ strong {
         padding-top: 150px; //お手本は80px
         @include btn {
             background-position: center -25px;
-            padding-top: 131px;
+            padding-top: 130px;
         }
         @include mobile {
             background-size: cover;
@@ -552,6 +552,12 @@ strong {
             background-position: center -23px;
             margin: 0 0 -3px;
         }
+    }
+}
+
+.main-blue .wrapper-inner1-center {
+    @include btn {
+        // background-position-y: -22px;
     }
 }
 
@@ -629,6 +635,9 @@ strong {
     &-wrapper {
         max-width: 1078px;
         margin: -172px auto 0;    //お手本は 0 auto
+        @include btn {
+            margin: -193px auto 0;
+        }
         @include mobile {
             margin: -78px auto 0;
         }
@@ -711,7 +720,7 @@ strong {
     font-weight: 700;
     margin: 0.5rem 0 0 0;
     @include mobile {
-    white-space: nowrap;
+    white-space: pre-wrap;
     margin: 0.5em 0 0 0;
     line-height: 1.7;
     font-weight: 700;
