@@ -361,7 +361,7 @@ strong {
 
 .main-blue {
   position: relative;
-  height: 650px;
+  height: 707px;
   overflow: hidden;
   background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero3.png);
   background-color: transparent;
@@ -369,6 +369,14 @@ strong {
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
+}
+@media screen and (max-width: 767px) {
+  .main-blue {
+    height: 300px;
+    padding-bottom: 320px;
+    background-position: center -25px;
+    margin: 49px 0 -9px;
+  }
 }
 .main-blue .main-img {
   position: absolute;
@@ -384,8 +392,22 @@ strong {
   justify-content: center;
   padding-top: 150px;
 }
+@media screen and (max-width: 767px) {
+  .main-blue .wrapper-inner1-center {
+    background-size: cover;
+    align-items: flex-end;
+    background-position: center -27px;
+  }
+}
 .main-blue .main-img-layer1 {
-  background: transparent url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero2.png) no-repeat -305px -5px;
+  background: transparent url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero2.png) no-repeat center -5px;
+}
+@media screen and (max-width: 767px) {
+  .main-blue .main-img-layer1 {
+    background-size: cover;
+    background-position: center -23px;
+    margin: 0 0 -3px;
+  }
 }
 
 .inner1-center {
@@ -394,6 +416,14 @@ strong {
   text-align: center;
   padding: 40px 40px 19px 40px;
   border-radius: 10px;
+}
+@media screen and (max-width: 767px) {
+  .inner1-center {
+    width: 100%;
+    max-width: 100%;
+    padding: 9px 0 13px 0;
+    border-radius: 0;
+  }
 }
 .inner1-center h1 {
   margin-top: 0;
@@ -404,13 +434,30 @@ strong {
   height: auto;
   vertical-align: middle;
 }
+@media screen and (max-width: 767px) {
+  .inner1-center h1 img {
+    display: none;
+  }
+}
 .inner1-center p {
   margin: 1.3em 0 0.5em;
   font-weight: 700;
 }
+@media screen and (max-width: 767px) {
+  .inner1-center p {
+    margin: 6.5px 0;
+    font-size: 13px;
+  }
+}
 .inner1-center .p-btn {
   line-height: 1;
   display: inline-block;
+}
+@media screen and (max-width: 767px) {
+  .inner1-center .p-btn {
+    margin: 6.5px 0;
+    font-size: 13px;
+  }
 }
 .inner1-center .p-btn a {
   padding: 24.5px 37px;
@@ -422,29 +469,58 @@ strong {
   font-weight: 700;
   border: solid 1px #c3c3c3;
   color: #fff;
+  transition: 0.7s;
+}
+@media screen and (max-width: 767px) {
+  .inner1-center .p-btn a {
+    padding: 12px 18px;
+    font-size: 1.6rem;
+  }
 }
 
 .section {
   color: #FFF;
   background-color: #000000;
-  padding: 0 0 4em 0;
+  padding: 144px 0 90px 0;
+}
+@media screen and (max-width: 767px) {
+  .section {
+    margin: 10px 0 0;
+  }
+}
+.section-wrapper {
+  max-width: 1078px;
+  margin: -173px auto 0;
 }
 .section-box {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 100vw;
+}
+@media screen and (max-width: 767px) {
+  .section-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .section1-content, .section2-content, .section3-content {
   margin: 0 50px;
   width: 229px;
   margin-top: -160px;
+  z-index: 300;
 }
 @media screen and (max-width: 1078px) {
   .section1-content, .section2-content, .section3-content {
     width: 29.33%;
-    margin: -160px 2%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section1-content, .section2-content, .section3-content {
+    margin-top: 0;
+    margin-bottom: 40px;
+    width: auto;
   }
 }
 
@@ -463,6 +539,13 @@ strong {
   border-radius: 50%;
   background-color: #FFF;
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  .section1-item p,
+.section2-item p,
+.section3-item p {
+    margin: 0 auto;
+  }
 }
 .section1-item i,
 .section2-item i,
@@ -485,8 +568,17 @@ strong {
 .section1-info,
 .section2-info,
 .section3-info {
-  margin: 0.5em 0 0 0;
   line-height: 1.7;
   font-weight: 700;
+}
+@media screen and (max-width: 767px) {
+  .section1-info,
+.section2-info,
+.section3-info {
+    white-space: nowrap;
+    margin: 0.5em 0 0 0;
+    line-height: 1.7;
+    font-weight: 700;
+  }
 }
 /*# sourceMappingURL=style.css.map */

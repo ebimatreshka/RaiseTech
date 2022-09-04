@@ -1,15 +1,15 @@
 @charset  "utf-8";
 
 //色指定
-$blue-color: #2498B3; 
+$blue-color : #2498B3; 
 $black-color: #121212;
 $white-color: #FFF;
 
 //レスポンシブ対応
 //ブレイクポイント
-$first: 1280px; //ヘッダーの左のコメントが消える
+$first : 1280px; //ヘッダーの左のコメントが消える
 $second: 1260px; //メニューのリストが左に寄る
-$third: 1200px; //ハンバーガーボタン出現、ヘッダーの高さ変化、ロゴ小さくなる
+$third : 1200px; //ハンバーガーボタン出現、ヘッダーの高さ変化、ロゴ小さくなる
 $fourth: 1078px; //○が真ん中に寄ってくる
 $mobile: 767px; //スマホ表示(絵、文字、ボタン)絵は一つづつ 説明も一行
 
@@ -42,7 +42,7 @@ $mobile: 767px; //スマホ表示(絵、文字、ボタン)絵は一つづつ �
 
 
 * {
-    margin: 0;
+    margin : 0;
     padding: 0;
     box-sizing: border-box;         //要素の幅と高さにpaddingとborderを含めるという意味
 }
@@ -50,12 +50,12 @@ html {
     font-size: 62.5%;
 }
 body {
-    width: 100vw;
+    width      : 100vw;
     font-family: "Noto Sans JP", MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;;
-    font-size: 1.6rem;
+    font-size  : 1.6rem;
     font-weight: 400;
     line-height: 1.7;
-    color: $black-color;
+    color      : $black-color;
     overflow-x: hidden;
 }
 ul { 
@@ -63,39 +63,39 @@ ul {
 }
 a {
     text-decoration: none;
-    color: $black-color
+    color          : $black-color
 }
 
 
 //ヘッダー
 .header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1100;
+    width           : 100%;
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    z-index         : 1100;
     background-color: $white-color;
     @include btn {
-        height: 50px;           //①ヘッダーの高さが変わる
+        height      : 50px;           //①ヘッダーの高さが変わる
     }
 
     //ヘッダー左側
     &-left {
-        height: 70px;
-        display: flex;
+        height         : 70px;
+        display        : flex;
         justify-content: flex-start;
-        align-items: center;
+        align-items    : center;
         a {
-            display: flex;
+            display    : flex;
             line-height: 1.3;
             font-weight: 900;
         }
         img {
-            height: 33px;
-            width: auto;
+            height    : 33px;
+            width     : auto;
             @include btn {
                 height: 30px;      //②ロゴ小さくなる②
             }
@@ -503,7 +503,7 @@ strong {
 //実験
 .main-blue {
     position: relative;
-    height: 650px;
+    height: 707px;  //お手本は650px
     overflow: hidden;
     background-image: url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero3.png);//背景画像
     background-color: transparent;  //透過
@@ -511,6 +511,12 @@ strong {
     background-position: center center;
     background-size: cover; //要素がすき間なく埋まるように縦横比を保ちながら背景画像を表示
     background-attachment: fixed;   //画像固定
+    @include mobile {
+        height: 300px;
+        padding-bottom: 320px;
+        background-position: center -25px;
+        margin: 49px 0 -9px;
+    }
     .main-img {
         position: absolute;
         top: 0;
@@ -524,9 +530,20 @@ strong {
         align-items: flex-start;
         justify-content: center;
         padding-top: 150px; //お手本は80px
+        @include mobile {
+            background-size: cover;
+            align-items: flex-end;
+            background-position: center -27px;
+            // margin-top: 15px;
+        }
     }
     .main-img-layer1 {
-        background: transparent url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero2.png) no-repeat -305px -5px;//子供達
+        background: transparent url(http://176.34.11.254/wp-content/themes/raisetech2019/common/img/bg-hero2.png) no-repeat center -5px;//子供達
+        @include mobile {
+            background-size: cover;
+            background-position: center -23px;
+            margin: 0 0 -3px;
+        }
     }
 }
 
@@ -537,6 +554,13 @@ strong {
     text-align: center;
     padding: 40px 40px 19px 40px;
     border-radius: 10px;
+    @include mobile {
+        width: 100%;
+        max-width: 100%;
+        padding: 9px 0 13px 0;
+        border-radius: 0; 
+        // margin: 2px 0 12px;
+    }
     h1 {
         margin-top: 0;
         margin-bottom: 0.5rem;
@@ -544,15 +568,26 @@ strong {
             width: 280px;
             height: auto;
             vertical-align: middle;  //要素を中央揃え
+            @include mobile {
+                display: none;
+            }
         }
     }
     p {
         margin: 1.3em 0 0.5em;
         font-weight: 700;
+        @include mobile {
+            margin: 6.5px 0;
+            font-size: 13px;
+        }
     }
     .p-btn {
         line-height: 1;
         display: inline-block;
+        @include mobile {
+            margin: 6.5px 0;
+            font-size: 13px;
+        }
         a {
             padding: 24.5px 37px;
             font-size: 1.8rem;
@@ -563,7 +598,11 @@ strong {
             font-weight: 700;
             border: solid 1px #c3c3c3;
             color: #fff;
-            
+            transition: 0.7s;
+            @include mobile {
+                padding: 12px 18px;
+                font-size: 1.6rem;
+            }
         }
     }
 }
@@ -575,12 +614,25 @@ strong {
 .section {
     color: $white-color;
     background-color: #000000;
-    padding: 0 0 4em 0;
+    padding: 144px 0 90px 0;    //元は64px 0 64px 0;
+    @include mobile {
+        margin: 10px 0 0;
+    }
+    &-wrapper {
+        max-width: 1078px;
+        margin: -173px auto 0;    //お手本は 0 auto
+    }
     &-box {
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        width: 100vw;
+        // width: 100vw;
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
     }
 }
 
@@ -591,9 +643,15 @@ strong {
         margin: 0 50px;
         width: 229px;
         margin-top: -160px;
+        z-index: 300;
         @include circle{
         width: 29.33%;
-        margin: -160px 2%;
+        //margin: -160px 2%;
+        }
+        @include mobile {
+            margin-top: 0;
+            margin-bottom: 40px;
+            width: auto;
         }
     }
 }
@@ -611,6 +669,9 @@ strong {
         border-radius: 50%;
         background-color: $white-color;
         position: relative;
+        @include mobile {
+            margin: 0 auto;
+        }
     }
     i {
         width: 240px;
@@ -632,7 +693,13 @@ strong {
 .section1-info,
 .section2-info,
 .section3-info {
+    //margin: 0.5em 0 0 0;
+    line-height: 1.7;
+    font-weight: 700;
+    @include mobile {
+    white-space: nowrap;
     margin: 0.5em 0 0 0;
     line-height: 1.7;
     font-weight: 700;
+    }
 }
